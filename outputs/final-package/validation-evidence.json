@@ -88,6 +88,14 @@
       "status": "PASS"
     },
     {
+      "id": "public_case_study_numbers",
+      "status": "PASS",
+      "missing": {
+        "site": [],
+        "dist": []
+      }
+    },
+    {
       "id": "human_review_disclosure",
       "status": "PASS"
     },

@@ -191,8 +191,8 @@
     },
     {
       "path": "validation-evidence.json",
-      "bytes": 4208,
-      "sha256": "53992e91fac110d860ab62264ef6c74f32e96668b9ed6f2fe9bbb8dccb05405f"
+      "bytes": 4352,
+      "sha256": "2e557a82c6281a8ebc1adbbb1e956464901075b8b1db18a4d11ca94cd1f55afb"
     },
     {
       "path": "validation-report.md",

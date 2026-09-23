@@ -1,4 +1,7 @@
+import contextlib
 import csv
+import importlib.util
+import io
 import json
 import sqlite3
 import subprocess
@@ -186,6 +189,43 @@ class AnalyticsTests(unittest.TestCase):
             rows = list(csv.DictReader(completed.stdout.splitlines()))
             self.assertEqual("descriptive", rows[0]["analysis_type"])
             self.assertEqual("USD_millions", rows[0]["volume_unit"])
+
+
+def load_validator():
+    spec = importlib.util.spec_from_file_location(
+        "validate_final_evidence", ROOT / "scripts" / "validate_final_evidence.py"
+    )
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+class FinalEvidenceTests(unittest.TestCase):
+    def test_validator_skips_missing_prep_inputs_and_exits_1_on_fail(self):
+        validator = load_validator()
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            for name in ("artifacts", "data", "sql", "dist"):
+                (root / name).symlink_to(ROOT / name)
+            (root / "outputs").mkdir()
+            for name in ("final-package", "descriptive-bridge"):
+                (root / "outputs" / name).symlink_to(ROOT / "outputs" / name)
+            stderr = io.StringIO()
+            with contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(stderr):
+                code = validator.main(root)
+            self.assertEqual(1, code)
+            self.assertIn("scripts/build_enhanced_analysis.py", stderr.getvalue())
+            self.assertIn("FAIL: public_case_study", stderr.getvalue())
+            (root / "outputs" / "public-case-study").symlink_to(ROOT / "outputs" / "public-case-study")
+            with contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()):
+                self.assertEqual(0, validator.main(root))
+
+    def test_site_numbers_match_final_package_data(self):
+        validator = load_validator()
+        final = ROOT / "outputs" / "final-package"
+        html = (ROOT / "dist" / "index.html").read_text(encoding="utf-8")
+        self.assertEqual([], validator.site_number_problems(html, final))
+        self.assertEqual(["$1,002.5M"], validator.site_number_problems(html.replace("$1,002.5M", "$1,000.0M"), final))
 
 
 if __name__ == "__main__":
