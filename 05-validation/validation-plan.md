@@ -19,7 +19,7 @@ No checks below have been run against a built model. They are acceptance contrac
 | V-13 | Duplicate observation key | Import rejected or quarantined | High |
 | V-14 | Memo numeric claims compared with final tables | 100% match | Critical |
 | V-15 | Reproduction from clean local checkout | Artifacts regenerate with documented commands | Critical |
-| V-16 | Demo claims audit | No causal, internal-data, eligibility, or production claims | High |
+| V-16 | Demo claims audit | No causal, internal-data, or production claims | High |
 
 ## Verdict vocabulary
 

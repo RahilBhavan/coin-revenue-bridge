@@ -11,8 +11,8 @@
     },
     {
       "path": "ai-contribution.md",
-      "bytes": 2594,
-      "sha256": "d3e11a3afef8016db998c62777dd8f14cf57b6d005314ff3fc4b38f40a84da7d"
+      "bytes": 2440,
+      "sha256": "225639bf850769866dcbd17700c6ddb62c39223cdec900277119c96a22ad604c"
     },
     {
       "path": "analysis.sql",
@@ -51,8 +51,8 @@
     },
     {
       "path": "demo-script.md",
-      "bytes": 3384,
-      "sha256": "4184e4c10669766e2b120540ae35685dc09d5385d3dfa8a82a8e3365cf76a44e"
+      "bytes": 3346,
+      "sha256": "9960437399f1ee867ec3c50d33dfcae6526337b2d32f118cce3d0ef3040b72ca"
     },
     {
       "path": "demo.html",
@@ -192,12 +192,12 @@
     {
       "path": "validation-evidence.json",
       "bytes": 4352,
-      "sha256": "2e557a82c6281a8ebc1adbbb1e956464901075b8b1db18a4d11ca94cd1f55afb"
+      "sha256": "f0a68cc06cf3e4894e99beeb2d870a26453846de7d13827e65fcb0ea0fed89f1"
     },
     {
       "path": "validation-report.md",
-      "bytes": 7835,
-      "sha256": "6c147f451dad393ec45fa4e56148e0d0095f03f90d9d7a939e60aa8b1d960d9d"
+      "bytes": 7822,
+      "sha256": "a278aa0020c1da4caff63ed342ef0eb46781e4a89f93cee257bf70cc8eb3a61c"
     },
     {
       "path": "workbook-preview.png",

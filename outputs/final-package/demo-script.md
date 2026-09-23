@@ -33,4 +33,4 @@ The original build used a Playwright-bundled FFmpeg binary to encode the eight r
 - no causal claim;
 - no claim that effective yield is Coinbase’s fee rate;
 - no claim that public volume covers every revenue-generating activity;
-- no claim about current openings, hiring outcomes, or production use.
+- no claim about production use.

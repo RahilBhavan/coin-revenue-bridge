@@ -33,9 +33,9 @@ Estimated total: **28–38 focused hours**, excluding external feedback. This is
 
 Required: browser access to SEC public filings; local SQLite; spreadsheet software that writes `.xlsx`; a scripting language already available locally; PDF export; screen recording. Prefer standard-library or existing-environment tools. Do not add production dependencies. Exact commands belong in implementation after environment inspection.
 
-Optional: charting library already present; external practitioner feedback explicitly authorized by the user. Not required: Coinbase account, CDP, API keys, wallet, paid data, live market feed, Base, or x402.
+Optional: charting library already present; external practitioner feedback. Not required: Coinbase account, CDP, API keys, wallet, paid data, live market feed, Base, or x402.
 
 ## Execution sequence and checkpoints
 
-Each milestone ends in an inspectable artifact and a go/pivot/stop decision. Do not begin presentation polish before the feasibility gate. Credit Risk remains first priority; start this build only after the portfolio roadmap triggers the second project.
+Each milestone ends in an inspectable artifact and a go/pivot/stop decision. Do not begin presentation polish before the feasibility gate.
 

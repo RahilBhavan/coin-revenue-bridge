@@ -1,6 +1,6 @@
 # Three designs compared
 
-Scores are planning judgments from 1 (weak) to 5 (strong), not hiring odds or validated results. Weights: role fit 30%, decision usefulness 25%, data defensibility 20%, build feasibility 15%, distinctiveness 10%.
+Scores are planning judgments from 1 (weak) to 5 (strong), not validated results. Weights: strategic-finance fit 30%, decision usefulness 25%, data defensibility 20%, build feasibility 15%, distinctiveness 10%.
 
 | Design | Fit | Decision | Data | Build | Distinctive | Weighted | Verdict |
 |---|---:|---:|---:|---:|---:|---:|---|
@@ -10,7 +10,7 @@ Scores are planning judgments from 1 (weak) to 5 (strong), not hiring odds or va
 
 ## A. Vintage-aware forecast and bridge
 
-Compare two naive baselines with one driver forecast, then explain a featured miss. It best demonstrates the role's forecast, variance, Excel, SQL, and judgment requirements. The design risks leakage, overclaiming, and too few observations; strict vintage gates contain those risks.
+Compare two naive baselines with one driver forecast, then explain a featured miss. It best exercises forecasting, variance analysis, Excel, SQL, and judgment. The design risks leakage, overclaiming, and too few observations; strict vintage gates contain those risks.
 
 ## B. Descriptive bridge
 

@@ -26,7 +26,7 @@ The evidence gate changed the deliverable. Only nine comparable paired quarters 
 | V-13 | PASS | `validate_final_evidence.py` confirmed 20 unique current observation keys and created a temporary duplicated input; `ingest_csv` rejected it with `AnalysisError`. No production file was changed. |
 | V-14 | PASS | `validate_final_evidence.py` matched the memo’s 863.8, 852.9, and 10.9 claims and required label to independently recomputed values. Workbook validator also checked memo/reviewer labels and formulas. |
 | V-15 | PASS | A clean isolated copy was assembled from source/data/scripts with a fresh output directory. All 11 tests passed; the reporting inputs and enhanced analyses regenerated; the seven-sheet workbook rebuilt; and the validator passed. This proves clean-workspace reproduction with the declared bundled runtime, not portability to arbitrary machines. |
-| V-16 | PASS | Automated string audit found the required descriptive label and explicit non-extrapolation, non-causality, and definition-break language in `demo.html`. Manual review confirmed no internal-data, eligibility, production, causal, or forecast-performance claim. |
+| V-16 | PASS | Automated string audit found the required descriptive label and explicit non-extrapolation, non-causality, and definition-break language in `demo.html`. Manual review confirmed no internal-data, production, causal, or forecast-performance claim. |
 
 ## Executed commands and observed results
 

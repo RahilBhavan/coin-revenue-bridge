@@ -2,7 +2,7 @@
 
 ## Decision and audience
 
-Primary audience: an FP&A practitioner or hiring reviewer with three to five minutes. The artifact must answer a planning decision, not showcase a dashboard.
+Primary audience: an FP&A practitioner or finance reviewer with three to five minutes. The artifact must answer a planning decision, not showcase a dashboard.
 
 **Decision:** after comparing an ex-ante forecast with reported actuals, should the next forecast retain its volume-growth assumption, revise its effective-yield assumption, or request more evidence about product/customer mix before changing either?
 
@@ -10,7 +10,7 @@ Primary audience: an FP&A practitioner or hiring reviewer with three to five min
 
 ## Why this is the strongest design
 
-- It maps directly to the role evidence: revenue forecasting, variance analysis, macro/crypto drivers, spreadsheet modeling, SQL/BI, and responsible use of an agentic coding tool.
+- It exercises core strategic-finance work: revenue forecasting, variance analysis, macro/crypto drivers, spreadsheet modeling, SQL/BI, and responsible use of an agentic coding tool.
 - It produces a real finance judgment: what assumption to investigate next.
 - Public filings expose consumer revenue and volume, but also reveal the exact limitation that makes the exercise interesting: revenue is not solely driven by reported spot volume, and definitions change.
 - A simple model and an honest failure analysis are more defensible than complex coefficients fit to a small quarterly sample.

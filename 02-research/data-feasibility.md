@@ -37,7 +37,3 @@ Build a quarterly panel whose grain is **one metric × one quarter × one public
 
 Proceed with forecasting only if there are at least 8 comparable training observations before the first holdout and at least 4 chronological holdouts under one definition family. Otherwise use Design B, the descriptive bridge. This threshold is a project rule, not a statistical guarantee.
 
-## Source limitations
-
-The official Coinbase careers page previously triggered browser admin-policy verification. This plan does not bypass, proxy, or infer around that restriction. The supplied posting extract remains historical role evidence; current availability and full eligibility are unverified.
-

@@ -1,6 +1,6 @@
 ts	phase	decision	why	evidence	result
 2026-09-20T00:00:00Z	frame	Defined completion as reproducible cutoff-safe forecast, exact bridge, full holdout disclosure, and standalone decision memo	The result must be falsifiable and useful even if the driver model loses	README.md	Planning predicate defined
-2026-09-20T00:00:01Z	design	Selected vintage-aware consumer transaction revenue forecast and exact bridge	Best match to role evidence while preserving a credible business decision	03-design/design-options.md	Selected conditionally
+2026-09-20T00:00:01Z	design	Selected vintage-aware consumer transaction revenue forecast and exact bridge	Best match to strategic-finance planning work while preserving a credible business decision	03-design/design-options.md	Selected conditionally
 2026-09-20T00:00:02Z	evidence	Made original-vintage quarter coverage the first build gate	The 2025 filing reports a metric-definition change and prior-period recasts	02-research/data-feasibility.md	Open until implementation
 2026-09-20T00:00:03Z	scope	Separated and deferred x402 business case	It serves a different decision and is not required for historical FP&A evidence	03-design/design-options.md	Deferred
 2026-09-20T00:00:04Z	execution	Made an 8–12 hour feasibility packet the first milestone	Retires the largest risk before workbook and presentation effort	06-execution/first-build.md	Planned
