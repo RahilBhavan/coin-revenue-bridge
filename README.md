@@ -11,17 +11,18 @@ The Q1 2024 revenue reclassification and later trading-volume changes are preser
 
 ## Start here
 
-1. `outputs/public-case-study/index.html`
-2. `outputs/final-package/decision-memo.pdf`
-3. `outputs/final-package/revenue-analysis.xlsx`
-4. `outputs/final-package/reviewer-packet.pdf`
-5. `outputs/coinbase-strategic-finance-executive-package.zip`
-6. `outputs/final-package/validation-report.md`
-7. [Data feasibility verdict](02-research/feasibility-verdict.md)
+1. [Public case study](https://coinbase-strategic-finance-case-study.rbhavanzim.chatgpt.site)
+2. `outputs/public-case-study/index.html`
+3. `outputs/final-package/decision-memo.pdf`
+4. `outputs/final-package/revenue-analysis.xlsx`
+5. `outputs/final-package/reviewer-packet.pdf`
+6. `outputs/coinbase-strategic-finance-executive-package.zip`
+7. `outputs/final-package/validation-report.md`
+8. [Data feasibility verdict](02-research/feasibility-verdict.md)
 
 ## Completion state
 
-The build includes 13 frozen SEC sources, reviewed and normalized CSV data, a Python/SQLite analytical core, 11 automated tests, an exact descriptive bridge, symmetric attribution, editable planning sensitivities, a seven-sheet workbook, two-page PDFs, a public-ready case-study page, and compact executive package. No forecast was fit or scored on the SEC-derived data. External human review and public deployment remain intentionally open.
+The build includes 13 frozen SEC sources, reviewed and normalized CSV data, a Python/SQLite analytical core, 11 automated tests, an exact descriptive bridge, symmetric attribution, editable planning sensitivities, a seven-sheet workbook, two-page PDFs, a deployed public case-study page, and compact executive package. No forecast was fit or scored on the SEC-derived data. External human review remains open.
 
 ## Reproduce the current build
 
@@ -48,15 +49,15 @@ See `02-research/feasibility-verdict.md` for the PIVOT decision and `outputs/des
 
 - x402 is a separate, deferred business case and is not a prerequisite.
 - No claim of internal Coinbase data, budgets, pricing, causality, production readiness, hiring eligibility, referral, or business endorsement.
-- No live services, wallets, transactions, paid APIs, deployment, outreach, or application activity.
+- No live services, wallets, transactions, paid APIs, outreach, or application activity beyond the static public case-study deployment.
 - Public-source analysis must respect publication dates and definition vintages.
 
 ## Remaining release items
 
 - Obtain independent practitioner review; the protocol exists, but no external
   reviewer has approved the claims.
-- Visually inspect the public case-study page in a normal logged-out browser
-  before deployment; local link and structure validation has passed.
+- Recheck the production site after material content changes. Desktop and mobile
+  local rendering passed before the first deployment.
 - Use the checked-in 30-second H.264 MP4 for the X rollout; verify the final
   platform upload and captions before publishing.
 - Treat arbitrary-machine workbook regeneration as unproven because

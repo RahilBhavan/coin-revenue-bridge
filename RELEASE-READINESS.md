@@ -1,6 +1,6 @@
 # Release readiness
 
-Last validated: **2026-09-22**
+Last validated: **2026-09-23**
 
 ## Ready
 
@@ -23,7 +23,8 @@ Last validated: **2026-09-22**
 - Forecast accuracy and model-comparison checks are **NOT RUN** because the
   evidence gate failed and no real forecast was built.
 - External practitioner review is pending.
-- The public site is assembled but not deployed.
+- Public Sites version 1 is deployed at
+  `https://coinbase-strategic-finance-case-study.rbhavanzim.chatgpt.site`.
 - A 30-second 1280×720 H.264 MP4 is verified and ready for an upload test.
 - Desktop and 390×844 mobile browser rendering passed. The mobile sensitivity
   table scrolls within its container without widening the page; all linked
@@ -52,4 +53,4 @@ python3 scripts/validate_final_evidence.py
 
 GitHub publication does not change the claim boundary. Keep
 **DESCRIPTIVE / NOT A FORECAST** visible, retain the AI contribution record,
-and do not represent pending human review or deployment as complete.
+and do not represent pending human review as complete.
