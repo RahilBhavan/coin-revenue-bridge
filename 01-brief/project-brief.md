@@ -10,7 +10,7 @@ Primary audience: an FP&A practitioner or finance reviewer with three to five mi
 
 ## Why this is the strongest design
 
-- It exercises core strategic-finance work: revenue forecasting, variance analysis, macro/crypto drivers, spreadsheet modeling, SQL/BI, and responsible use of an agentic coding tool.
+- It exercises core strategic-finance work: revenue forecasting, variance analysis, macro/crypto drivers, spreadsheet modeling, and SQL/BI.
 - It produces a real finance judgment: what assumption to investigate next.
 - Public filings expose consumer revenue and volume, but also reveal the exact limitation that makes the exercise interesting: revenue is not solely driven by reported spot volume, and definitions change.
 - A simple model and an honest failure analysis are more defensible than complex coefficients fit to a small quarterly sample.

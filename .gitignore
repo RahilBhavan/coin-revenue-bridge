@@ -18,12 +18,6 @@ work/real-reporting-inputs/
 work/reporting-validation/
 work/tmp/
 
-# Local-only notes, not part of the project
-02-research/prior-plans/
-outputs/twitter-rollout-plan.md
-outputs/x-rollout-alt-text.md
-outputs/x-rollout-measurement.csv
-work/x-rollout-research.md
 
 # Local environment and credentials
 .env
