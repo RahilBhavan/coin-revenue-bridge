@@ -1,8 +1,10 @@
 # Coinbase consumer revenue bridge, Q3 to Q4 2024
 
-[![ci](https://github.com/RahilBhavan/coinbase-strategic-finance/actions/workflows/ci.yml/badge.svg)](https://github.com/RahilBhavan/coinbase-strategic-finance/actions/workflows/ci.yml)
+[![ci](https://github.com/RahilBhavan/coin-revenue-bridge/actions/workflows/ci.yml/badge.svg)](https://github.com/RahilBhavan/coin-revenue-bridge/actions/workflows/ci.yml)
 [![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-**Live case study: https://rahilbhavan.github.io/coinbase-strategic-finance/**
+**Live case study: https://rahilbhavan.github.io/coin-revenue-bridge/**
+
+[![Screenshot of the live case study: Q3 to Q4 2024 headline numbers, $863.8M revenue increase split into $852.9M volume and $10.9M yield effects](docs/screenshot.png)](https://rahilbhavan.github.io/coin-revenue-bridge/)
 
 A source-backed bridge that splits Coinbase's Q3 to Q4 2024 consumer transaction revenue change into volume and effective-yield effects, built only from public SEC filings.
 
@@ -34,11 +36,11 @@ The design set a gate before looking at results: at least twelve comparable quar
 
 ## What's in it
 
-- [Live case study](https://rahilbhavan.github.io/coinbase-strategic-finance/), also in [`dist/`](dist/index.html)
+- [Live case study](https://rahilbhavan.github.io/coin-revenue-bridge/), also in [`dist/`](dist/index.html)
 - [Two-page decision memo (PDF)](outputs/final-package/decision-memo.pdf)
 - [Seven-sheet workbook (XLSX)](outputs/final-package/revenue-analysis.xlsx), formula-driven
 - [Reviewer packet (PDF)](outputs/final-package/reviewer-packet.pdf), the strongest objections and how to test them
-- [Executive package (ZIP)](outputs/coinbase-strategic-finance-executive-package.zip): memo, workbook, reviewer packet, review protocol
+- [Executive package (ZIP)](outputs/coin-revenue-bridge-executive-package.zip): memo, workbook, reviewer packet, review protocol
 - [Validation report](outputs/final-package/validation-report.md) and [machine-readable evidence](outputs/final-package/validation-evidence.json)
 
 ## How it's built
@@ -63,7 +65,7 @@ python3 scripts/validate_final_evidence.py
 
 `validate_final_evidence.py` exits 1 if any check fails. Without the two prep steps it skips the checks that need their outputs and prints the command to run.
 
-Optional: rebuild and check the workbook. These two steps need Node.js 20 or later and `@oai/artifact-tool`, which comes from a private Codex runtime and is not in this repository. The checked-in workbook stays inspectable without them.
+Optional: rebuild and check the workbook. These two steps need Node.js 20 or later. The workbook rebuild step uses a non-public spreadsheet tool; from a fresh clone it is skipped and the committed workbook is the source of truth.
 
 ```sh
 node scripts/build_descriptive_reporting.mjs --metrics work/real-reporting-inputs/processed_metrics.csv --bridge work/real-reporting-inputs/descriptive_bridge.csv --enhanced-dir work/enhanced-analysis --output-dir outputs/descriptive-bridge --label "DESCRIPTIVE / NOT A FORECAST"
@@ -88,3 +90,10 @@ node scripts/validate_descriptive_reporting.mjs --output-dir outputs/descriptive
 - [Design options](03-design/design-options.md) and [architecture](03-design/architecture.md)
 - [Deliverables](04-deliverables/deliverables.md), [validation plan](05-validation/validation-plan.md), [adversarial review](05-validation/adversarial-review.md)
 - [Artifact manifest](artifacts/manifest.md), [decision log](decisions.tsv), [release readiness](RELEASE-READINESS.md), [AI contribution record](outputs/final-package/ai-contribution.md)
+
+## Related projects
+
+- [spine](https://github.com/RahilBhavan/spine): live stress test of Coinbase's Morpho loan book on Base
+- [mara-credit-case](https://github.com/RahilBhavan/mara-credit-case): credit committee case on a $5M secured revolver to MARA Holdings
+- [x402-exception-desk](https://github.com/RahilBhavan/x402-exception-desk): synthetic x402 payment exception desk
+- [Crypto finance hub](https://rahilbhavan.com/crypto-finance): all related work in one place

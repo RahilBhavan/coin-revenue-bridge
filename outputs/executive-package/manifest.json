@@ -9,7 +9,7 @@
     {
       "path": "decision-memo.pdf",
       "bytes": 70519,
-      "sha256": "4420f0b69d53cacab8cab81774ba2d986d3c4476f39f8153ea3c5ed9db8f81c6"
+      "sha256": "f5c11f1507b3fd6389d14f98b36d04c7fdc65ce203df6de2de4b5c42a0736e1b"
     },
     {
       "path": "practitioner-review.md",
@@ -24,7 +24,7 @@
     {
       "path": "reviewer-packet.pdf",
       "bytes": 70531,
-      "sha256": "c90ed7d16898988e0b6787e08709fa25cdf373bdce2a8caf672a808cbc471e3f"
+      "sha256": "db67bda174fb15316eac285cf04b4704027792ecff29361bb10aeeac4ef35814"
     }
   ]
 }

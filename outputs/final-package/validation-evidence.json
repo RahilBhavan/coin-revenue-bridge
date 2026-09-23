@@ -105,11 +105,11 @@
       "files": [
         {
           "path": "outputs/final-package/decision-memo.pdf",
-          "sha256": "4420f0b69d53cacab8cab81774ba2d986d3c4476f39f8153ea3c5ed9db8f81c6"
+          "sha256": "f5c11f1507b3fd6389d14f98b36d04c7fdc65ce203df6de2de4b5c42a0736e1b"
         },
         {
           "path": "outputs/final-package/reviewer-packet.pdf",
-          "sha256": "c90ed7d16898988e0b6787e08709fa25cdf373bdce2a8caf672a808cbc471e3f"
+          "sha256": "db67bda174fb15316eac285cf04b4704027792ecff29361bb10aeeac4ef35814"
         },
         {
           "path": "outputs/final-package/demo.webm",
@@ -125,7 +125,7 @@
         },
         {
           "path": "outputs/final-package/demo-script.md",
-          "sha256": "9960437399f1ee867ec3c50d33dfcae6526337b2d32f118cce3d0ef3040b72ca"
+          "sha256": "d0103ed9a0227b4be69e17b2c0199cad7950d803752169117531ec65aeca430a"
         },
         {
           "path": "outputs/final-package/ai-contribution.md",
@@ -133,7 +133,7 @@
         },
         {
           "path": "outputs/final-package/validation-report.md",
-          "sha256": "6ebd8d552158181ee45918e4c0a88012263003e322e7610d3d678851a23466e2"
+          "sha256": "59a5db2040e3ff29ce00bb81a6c5977f10d814b0afca491e9e261d1301e0fce5"
         },
         {
           "path": "outputs/final-package/overlap-reconciliation.csv",

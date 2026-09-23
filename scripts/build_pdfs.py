@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Build the final standalone PDF memo and reviewer packet."""
 
+import os
 from pathlib import Path
 
 from reportlab.lib import colors
@@ -25,6 +26,8 @@ from reportlab.platypus import (
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "outputs" / "final-package"
 OUT.mkdir(parents=True, exist_ok=True)
+# Fixed creation/mod date (the 2026-09-20 evidence cutoff) so rebuilds are byte-identical.
+os.environ["SOURCE_DATE_EPOCH"] = "1789862400"
 
 NAVY = colors.HexColor("#10233F")
 BLUE = colors.HexColor("#175CD3")
@@ -94,7 +97,7 @@ class ReportDoc(BaseDocTemplate):
     def __init__(self, filename, doc_label):
         super().__init__(filename, pagesize=letter, rightMargin=0.58 * inch, leftMargin=0.58 * inch,
                          topMargin=0.76 * inch, bottomMargin=0.52 * inch, title=doc_label,
-                         author="Rahil Bhavan")
+                         author="Rahil Bhavan", invariant=1)
         self.doc_label = doc_label
         frame = Frame(self.leftMargin, self.bottomMargin, self.width, self.height, id="body")
         self.addPageTemplates(PageTemplate(id="main", frames=[frame], onPage=self.draw_page))

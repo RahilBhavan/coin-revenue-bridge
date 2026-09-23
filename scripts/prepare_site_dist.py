@@ -10,6 +10,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "outputs" / "public-case-study"
 TARGET = ROOT / "dist"
+SOCIAL_CARD = ROOT / "docs" / "social-card.png"
 
 
 def main() -> int:
@@ -19,6 +20,7 @@ def main() -> int:
     for source in sorted(SOURCE.iterdir()):
         if source.is_file():
             (TARGET / source.name).write_bytes(source.read_bytes())
+    (TARGET / SOCIAL_CARD.name).write_bytes(SOCIAL_CARD.read_bytes())
     print(f"prepared {len(list(TARGET.iterdir()))} static files in {TARGET}")
     return 0
 

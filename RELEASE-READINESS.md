@@ -22,13 +22,14 @@ Last validated: **2026-09-23**
   evidence gate failed and no real forecast was built.
 - External practitioner review is pending.
 - GitHub Pages publishes `dist/` to
-  `https://rahilbhavan.github.io/coinbase-strategic-finance/`.
+  `https://rahilbhavan.github.io/coin-revenue-bridge/`.
 - A 30-second 1280×720 H.264 MP4 is verified and ready for an upload test.
 - Desktop and 390×844 mobile browser rendering passed. The mobile sensitivity
   table scrolls within its container without widening the page; all linked
   controls are present, the workbook image loads with alt text, and the browser
   console has no warnings or errors.
-- Workbook regeneration depends on the Codex-provided `@oai/artifact-tool`.
+- The workbook rebuild step uses a non-public spreadsheet tool; from a fresh
+  clone it is skipped and the committed workbook is the source of truth.
   Package-local bridge reproduction uses only Python's standard library.
 
 ## Executed validation commands
