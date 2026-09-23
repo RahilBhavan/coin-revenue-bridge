@@ -57,8 +57,8 @@ See `02-research/feasibility-verdict.md` for the PIVOT decision and `outputs/des
   reviewer has approved the claims.
 - Visually inspect the public case-study page in a normal logged-out browser
   before deployment; local link and structure validation has passed.
-- Create an H.264 MP4 social cut before an X rollout. The checked-in WebM files
-  are verified, but MP4 encoding was unavailable in the build environment.
+- Use the checked-in 30-second H.264 MP4 for the X rollout; verify the final
+  platform upload and captions before publishing.
 - Treat arbitrary-machine workbook regeneration as unproven because
   `@oai/artifact-tool` comes from the Codex workspace runtime. The analytical
   core and package-local bridge reproduction do not depend on it.

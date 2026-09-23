@@ -2,12 +2,12 @@
   "schema_version": "1.0",
   "status": "DESCRIPTIVE / NOT A FORECAST",
   "evidence_cutoff": "2026-09-20",
-  "file_count": 39,
+  "file_count": 40,
   "files": [
     {
       "path": "README.md",
-      "bytes": 2719,
-      "sha256": "ecf57e593d5df70e351bd83b4306ba036576d2d262449ec591d858c19b31aec7"
+      "bytes": 2783,
+      "sha256": "d5d12b13c00b324454aec4693f4f6ff1786843f071275be0f984d58c0f00c773"
     },
     {
       "path": "ai-contribution.md",
@@ -51,8 +51,8 @@
     },
     {
       "path": "demo-script.md",
-      "bytes": 3424,
-      "sha256": "fa3fa3fee0d5449f919ad5d40e37b13eba4f1d5d9538b9774a9d9e8efec54a77"
+      "bytes": 3389,
+      "sha256": "195df13d3a8ed6e7256c19a9fe5ee936f1ad225f14b2f57a8cccb159e655aebd"
     },
     {
       "path": "demo.html",
@@ -161,8 +161,8 @@
     },
     {
       "path": "revenue-analysis.xlsx",
-      "bytes": 18111,
-      "sha256": "264cd064032a9fae41b75c479eed61f94ad2c15f53ed520739096a78520bcbd3"
+      "bytes": 18101,
+      "sha256": "1dc95888e68a49ddf07ce75403b03812ef462ffacd0a61704620ee75353f7e46"
     },
     {
       "path": "reviewer-packet.pdf",
@@ -173,6 +173,11 @@
       "path": "schema.sql",
       "bytes": 463,
       "sha256": "4c33905048f74cbfe639ca8f7b9e8d8be006149b17c6397d6333930564f9a5ca"
+    },
+    {
+      "path": "social-cut.mp4",
+      "bytes": 278110,
+      "sha256": "981ac0628899f0d1f5cfc5a02c71e02052dc5df48fa3cc0e57019ff26ff15e05"
     },
     {
       "path": "social-cut.webm",
@@ -187,12 +192,12 @@
     {
       "path": "validation-evidence.json",
       "bytes": 4208,
-      "sha256": "6df9eb4d5c11c4d6b0beee9a1ff40a8c1c9d599d46611a50fa03736bb0144b29"
+      "sha256": "c8edd48099a05ff7378d45384ad426757c074d5043b44aa4f7a702a3d029622a"
     },
     {
       "path": "validation-report.md",
-      "bytes": 7819,
-      "sha256": "d289709f9b3b098dab1ac001baf7d513319cfd6c24f6b98722563390f52b6d47"
+      "bytes": 7835,
+      "sha256": "6c147f451dad393ec45fa4e56148e0d0095f03f90d9d7a939e60aa8b1d960d9d"
     },
     {
       "path": "workbook-preview.png",

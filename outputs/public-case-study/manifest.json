@@ -1,5 +1,5 @@
 {
-  "file_count": 7,
+  "file_count": 8,
   "files": [
     {
       "path": "decision-memo.pdf",
@@ -8,8 +8,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 7424,
-      "sha256": "531b421fc6427df0843e3b7e466f7713a03722d227d43ce51de4c5dd765d2c19"
+      "bytes": 7475,
+      "sha256": "c89bcee59b2168b718a885a2857c582221da03761e9f8e202e6a1cc4e1d131d3"
     },
     {
       "path": "practitioner-review.md",
@@ -25,6 +25,11 @@
       "path": "reviewer-packet.pdf",
       "bytes": 70553,
       "sha256": "188e8ab28f7aa9023978f30d7fe90416c8a4400176f66c39869bce8b5ebe38f1"
+    },
+    {
+      "path": "social-cut.mp4",
+      "bytes": 278110,
+      "sha256": "981ac0628899f0d1f5cfc5a02c71e02052dc5df48fa3cc0e57019ff26ff15e05"
     },
     {
       "path": "social-cut.webm",

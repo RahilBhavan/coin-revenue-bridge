@@ -4,7 +4,7 @@
 **Run:** play `demo.webm`, or open `demo.html` for an interactive version. The HTML auto-advances; Space pauses; arrow keys move between frames.  
 **Status:** **DESCRIPTIVE / NOT A FORECAST**
 
-The system `PATH` had no FFmpeg, and a native Swift encoder could not compile because the installed compiler and macOS SDK builds do not match. A Playwright-bundled FFmpeg binary was subsequently located and used to encode the eight reviewed caption frames as a 180-second VP8 WebM. MP4 remains unavailable in this runtime, so the WebM and interactive HTML are the verified video deliverables. Both contain no network dependencies and use only reviewed local inputs.
+The original build used a Playwright-bundled FFmpeg binary to encode the eight reviewed caption frames as a 180-second VP8 WebM after the native Swift encoder failed. A system FFmpeg with H.264 support later became available and produced a verified 30-second, 1280×720 H.264 MP4 social cut. The WebM and interactive HTML remain the full three-minute walkthrough. All media uses reviewed local inputs and has no network dependency.
 
 ## Storyboard and optional talk track
 

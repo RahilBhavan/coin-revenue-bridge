@@ -117,7 +117,7 @@
         },
         {
           "path": "outputs/final-package/demo-script.md",
-          "sha256": "fa3fa3fee0d5449f919ad5d40e37b13eba4f1d5d9538b9774a9d9e8efec54a77"
+          "sha256": "195df13d3a8ed6e7256c19a9fe5ee936f1ad225f14b2f57a8cccb159e655aebd"
         },
         {
           "path": "outputs/final-package/ai-contribution.md",
@@ -125,7 +125,7 @@
         },
         {
           "path": "outputs/final-package/validation-report.md",
-          "sha256": "d289709f9b3b098dab1ac001baf7d513319cfd6c24f6b98722563390f52b6d47"
+          "sha256": "6c147f451dad393ec45fa4e56148e0d0095f03f90d9d7a939e60aa8b1d960d9d"
         },
         {
           "path": "outputs/final-package/overlap-reconciliation.csv",

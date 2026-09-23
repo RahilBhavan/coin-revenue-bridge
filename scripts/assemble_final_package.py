@@ -45,7 +45,8 @@ Use the Q3-to-Q4 2024 consumer transaction revenue bridge and editable planning 
 2. `revenue-analysis.xlsx` - inspectable seven-sheet model with trend, sensitivities, three attribution methods, definition crosswalks, and sources.
 3. `reviewer-packet.pdf` - two-page challenge packet.
 4. `demo.webm` or `demo.html` - three-minute captioned walkthrough.
-5. `validation-report.md` - executed V-01 through V-16 checks and limitations.
+5. `social-cut.mp4` - 30-second captioned H.264 social preview.
+6. `validation-report.md` - executed V-01 through V-16 checks and limitations.
 
 ## Reproducibility files
 
@@ -84,7 +85,7 @@ def main() -> int:
     for source, target in COPIES.items():
         if not source.exists():
             raise FileNotFoundError(source)
-        shutil.copy2(source, target)
+        target.write_bytes(source.read_bytes())
     raw_out = OUT / "raw-sources"
     raw_out.mkdir(exist_ok=True)
     with (ROOT / "artifacts/source-register.csv").open(newline="", encoding="utf-8") as handle:
@@ -95,7 +96,7 @@ def main() -> int:
         frozen_target = raw_out / frozen_source.name
         if not frozen_source.exists():
             raise FileNotFoundError(frozen_source)
-        shutil.copy2(frozen_source, frozen_target)
+        frozen_target.write_bytes(frozen_source.read_bytes())
         row["local_path"] = f"raw-sources/{frozen_source.name}"
     with (OUT / "source-register.csv").open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=fieldnames)

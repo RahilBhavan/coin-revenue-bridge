@@ -13,7 +13,8 @@ Use the Q3-to-Q4 2024 consumer transaction revenue bridge and editable planning 
 2. `revenue-analysis.xlsx` - inspectable seven-sheet model with trend, sensitivities, three attribution methods, definition crosswalks, and sources.
 3. `reviewer-packet.pdf` - two-page challenge packet.
 4. `demo.webm` or `demo.html` - three-minute captioned walkthrough.
-5. `validation-report.md` - executed V-01 through V-16 checks and limitations.
+5. `social-cut.mp4` - 30-second captioned H.264 social preview.
+6. `validation-report.md` - executed V-01 through V-16 checks and limitations.
 
 ## Reproducibility files
 

@@ -25,7 +25,7 @@ The evidence gate changed the deliverable. Only nine comparable paired quarters 
 | V-12 | PASS | Unit tests `test_missing_and_zero_volume_fail_safely` and `test_analytics_ready_data_allows_only_labeled_descriptive_bridge` passed. Zero or missing volume fails instead of creating a proxy. |
 | V-13 | PASS | `validate_final_evidence.py` confirmed 20 unique current observation keys and created a temporary duplicated input; `ingest_csv` rejected it with `AnalysisError`. No production file was changed. |
 | V-14 | PASS | `validate_final_evidence.py` matched the memo’s 863.8, 852.9, and 10.9 claims and required label to independently recomputed values. Workbook validator also checked memo/reviewer labels and formulas. |
-| V-15 | PASS | A clean isolated copy was assembled from source/data/scripts with a fresh output directory. All 9 tests passed; the reporting inputs and enhanced analyses regenerated; the seven-sheet workbook rebuilt; and the validator passed. This proves clean-workspace reproduction with the declared bundled runtime, not portability to arbitrary machines. |
+| V-15 | PASS | A clean isolated copy was assembled from source/data/scripts with a fresh output directory. All 11 tests passed; the reporting inputs and enhanced analyses regenerated; the seven-sheet workbook rebuilt; and the validator passed. This proves clean-workspace reproduction with the declared bundled runtime, not portability to arbitrary machines. |
 | V-16 | PASS | Automated string audit found the required descriptive label and explicit non-extrapolation, non-causality, and definition-break language in `demo.html`. Manual review confirmed no internal-data, eligibility, production, causal, or forecast-performance claim. |
 
 ## Executed commands and observed results
@@ -57,7 +57,7 @@ Playwright-bundled ffmpeg + frame streaming scripts
 → demo.webm is 180 seconds and social-cut.webm is 30 seconds; both VP8 1280×720
 ```
 
-`command -v ffmpeg` returned no system executable, and the Swift/SDK build mismatch prevented native MP4 encoding. The available Playwright-bundled FFmpeg exposes VP8 but not H.264, so it produced verified WebM deliverables instead: the 180-second walkthrough and a 30-second social cut. MP4 remains the only media-format gap.
+The original runtime lacked a system FFmpeg and the Swift/SDK mismatch prevented native MP4 encoding, so the first verified deliverables were VP8 WebM files. On 2026-09-22, system FFmpeg 9.0.2 with `libx264` produced a 30-second, 1280×720, yuv420p H.264 MP4. `ffprobe` confirmed the codec, dimensions, pixel format, duration, and file size.
 
 ## Hash evidence
 
