@@ -1,0 +1,6 @@
+period_end,consumer_transaction_revenue_mm,consumer_trading_volume_bn,published_at,definition_family,evidence_label,source_reference
+2024-03-31,1100,60,2024-05-02,synthetic_v1,SYNTHETIC SAMPLE,fixture://quarter-2024-q1
+2024-06-30,1250,72,2024-08-01,synthetic_v1,SYNTHETIC SAMPLE,fixture://quarter-2024-q2
+2024-09-30,1180,68,2024-10-30,synthetic_v1,SYNTHETIC SAMPLE,fixture://quarter-2024-q3
+2024-12-31,1400,80,2025-02-13,synthetic_v1,SYNTHETIC SAMPLE,fixture://quarter-2024-q4
+

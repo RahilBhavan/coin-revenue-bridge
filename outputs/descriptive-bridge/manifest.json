@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.2",
+  "analysis_type": "descriptive_bridge",
+  "status_label": "DESCRIPTIVE / NOT A FORECAST",
+  "definition_family": "PAIR-REV-POST2024Q1-VOL-SPOT-PRE2025Q4",
+  "trend_quarters": 9,
+  "workbook_sheets": [
+    "Descriptive Review",
+    "Planning Sensitivity",
+    "Bridge Attribution",
+    "Bridge Calculation",
+    "Definition Reconciliation",
+    "Definition Appendix",
+    "Metric Inputs"
+  ],
+  "features": [
+    "native editable nine-quarter revenue trend",
+    "original-versus-recast definition appendix",
+    "visible SEC provenance",
+    "formula-driven bridge and reconciliation",
+    "user-editable planning sensitivities",
+    "symmetric Shapley attribution",
+    "Q2-Q4 2025 definition crosswalk"
+  ],
+  "units": {
+    "revenue": "USD millions",
+    "volume": "USD billions",
+    "yield": "percentage points"
+  },
+  "inputs": [
+    {
+      "path": "work/real-reporting-inputs/processed_metrics.csv",
+      "sha256": "f327a32b057846efdc32d7e5cba8714781f3b5395eff8eaad39f72b603033ab6"
+    },
+    {
+      "path": "work/real-reporting-inputs/descriptive_bridge.csv",
+      "sha256": "02379c0d786f0aa275f531f7b2889f3f7c863591c352362cc0256e481b7a6d5f"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "descriptive-revenue-bridge.xlsx",
+      "sha256": "1dc95888e68a49ddf07ce75403b03812ef462ffacd0a61704620ee75353f7e46"
+    },
+    {
+      "path": "descriptive-review.png",
+      "sha256": "21aa370fe528013269347ca3d4300e9de5e0a98c47e0dbef78d4b7fb4ba66c61"
+    },
+    {
+      "path": "descriptive-memo.md",
+      "sha256": "7b9c210a1707bd5146384b1b339ed14a9aaed7dfbadd9e594cac3a9910b77e42"
+    },
+    {
+      "path": "descriptive-reviewer-packet.md",
+      "sha256": "61b0c9f5c46e43d2066d8d44038646b709960d8f68995ad897569ae9a4822b9e"
+    },
+    {
+      "path": "planning-sensitivity.png",
+      "sha256": "6d8e189cd8c4613be2a81b6bf3f6d2003b25b363ce83e9b3dded1675fc11bf63"
+    },
+    {
+      "path": "bridge-attribution.png",
+      "sha256": "ed82147e806d309c7f073dd7b6de4bb0e4d0e1d3289de6350e8edf8450ec1b5d"
+    },
+    {
+      "path": "definition-reconciliation.png",
+      "sha256": "3e4e42d7c0ef0553eaf51639fc277843defffab928281bdf75d23369b63658b1"
+    }
+  ],
+  "caveat": "Descriptive algebraic decomposition and illustrative sensitivity analysis; not a forecast and not causal evidence."
+}

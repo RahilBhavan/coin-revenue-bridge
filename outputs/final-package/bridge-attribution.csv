@@ -1,0 +1,4 @@
+method,volume_effect_mm,yield_effect_mm,total_change_mm,residual_mm,interpretation
+Volume first,852.882353,10.917647,863.800000,0.000000,Move volume at starting yield; then yield at ending volume.
+Yield first,859.851064,3.948936,863.800000,0.000000,Move yield at starting volume; then volume at ending yield.
+Symmetric Shapley,856.366708,7.433292,863.800000,0.000000,Average both valid orders to split the interaction term symmetrically.

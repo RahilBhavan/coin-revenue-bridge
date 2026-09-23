@@ -1,0 +1,4 @@
+case,volume_delta_pct,yield_delta_pp,volume_bn,effective_yield_pct,implied_revenue_mm,revenue_delta_mm,decision_prompt,claim_boundary
+Downside,-0.2000,-0.0010,75.2000,0.01333085,1002.4800,-344.6200,Investigate activity retention and customer/asset mix.,Illustrative sensitivity; not management guidance or a probability-weighted forecast.
+Reference,0.0000,0.0000,94.0000,0.01433085,1347.1000,0.0000,Reference case equals Q4 2024 actual inputs; it is not a forecast.,Illustrative sensitivity; not management guidance or a probability-weighted forecast.
+Upside,0.2000,0.0010,112.8000,0.01533085,1729.3200,382.2200,Test operating readiness and mix sustainability.,Illustrative sensitivity; not management guidance or a probability-weighted forecast.

@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.2",
+  "analysis_type": "descriptive_bridge",
+  "status_label": "DESCRIPTIVE / NOT A FORECAST — SAMPLE / NOT FOR SHARING",
+  "definition_family": "synthetic_v1",
+  "trend_quarters": 4,
+  "workbook_sheets": [
+    "Descriptive Review",
+    "Bridge Calculation",
+    "Definition Appendix",
+    "Metric Inputs"
+  ],
+  "features": [
+    "native editable nine-quarter revenue trend",
+    "original-versus-recast definition appendix",
+    "visible SEC provenance",
+    "formula-driven bridge and reconciliation"
+  ],
+  "units": {
+    "revenue": "USD millions",
+    "volume": "USD billions",
+    "yield": "percentage points"
+  },
+  "inputs": [
+    {
+      "path": "reporting/fixtures/processed_metrics.csv",
+      "sha256": "54cfea459f140f98494124e1bf1d09a14a124540cd2a4918f41b9cd06e55281c"
+    },
+    {
+      "path": "reporting/fixtures/descriptive_bridge.csv",
+      "sha256": "5049ad7b16c7f1a1989dee16c4474426f2e8af8338e876f142fb66669497089f"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "descriptive-revenue-bridge.xlsx",
+      "sha256": "91789d4527c905af96c20dbb061415cc889825a2fe51a1f933928cde5303986d"
+    },
+    {
+      "path": "descriptive-review.png",
+      "sha256": "b703bb70991388338d405d617832dc6cf77c7e004b6e48e1485f4edb37221adb"
+    },
+    {
+      "path": "descriptive-memo.md",
+      "sha256": "b61d95b809d8369fceeffd56ac91aaa9af2f1b2c64dbe79b91fe7ee3e4ba7958"
+    },
+    {
+      "path": "descriptive-reviewer-packet.md",
+      "sha256": "b938bfc17df5b20a0ea8fd8cdc01f8d2b6f383eebb9d4b49ca08fdd708b4146e"
+    }
+  ],
+  "caveat": "Descriptive algebraic decomposition and illustrative sensitivity analysis; not a forecast and not causal evidence."
+}

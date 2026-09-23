@@ -1,0 +1,149 @@
+{
+  "generated_from": "local reviewed artifacts",
+  "checks": [
+    {
+      "id": "source_hashes",
+      "status": "PASS",
+      "count": 13,
+      "mismatches": []
+    },
+    {
+      "id": "source_resolution",
+      "status": "PASS",
+      "observation_count": 20,
+      "unresolved": []
+    },
+    {
+      "id": "duplicate_keys",
+      "status": "PASS",
+      "unique": 20,
+      "rows": 20
+    },
+    {
+      "id": "duplicate_import_rejection",
+      "status": "PASS"
+    },
+    {
+      "id": "bridge_reconciliation",
+      "status": "PASS",
+      "revenue_change_mm": "863.8",
+      "volume_effect_mm": "852.8823529411764705882352944",
+      "yield_effect_mm": "10.91764705882352941176470530",
+      "residual_mm": "3.0E-25"
+    },
+    {
+      "id": "alternate_order",
+      "status": "PASS",
+      "yield_first_yield_effect_mm": "3.948936170212765957446808300",
+      "yield_first_volume_effect_mm": "859.8510638297872340425531914",
+      "allocation_shift_mm": "6.9687108886107634543178970"
+    },
+    {
+      "id": "symmetric_attribution",
+      "status": "PASS",
+      "volume_effect_mm": "856.366708",
+      "yield_effect_mm": "7.433292",
+      "residual_mm": "0.000000"
+    },
+    {
+      "id": "planning_sensitivities",
+      "status": "PASS",
+      "cases": [
+        {
+          "case": "Downside",
+          "implied_revenue_mm": "1002.4800"
+        },
+        {
+          "case": "Reference",
+          "implied_revenue_mm": "1347.1000"
+        },
+        {
+          "case": "Upside",
+          "implied_revenue_mm": "1729.3200"
+        }
+      ]
+    },
+    {
+      "id": "definition_reconciliation",
+      "status": "PASS",
+      "periods": 3,
+      "changes_bn": [
+        "-1.5",
+        "-1.6",
+        "-2.3"
+      ]
+    },
+    {
+      "id": "memo_claims",
+      "status": "PASS",
+      "missing": []
+    },
+    {
+      "id": "demo_claim_audit",
+      "status": "PASS",
+      "missing": []
+    },
+    {
+      "id": "public_case_study",
+      "status": "PASS"
+    },
+    {
+      "id": "human_review_disclosure",
+      "status": "PASS"
+    },
+    {
+      "id": "deliverable_presence",
+      "status": "PASS",
+      "files": [
+        {
+          "path": "outputs/final-package/decision-memo.pdf",
+          "sha256": "e986b005ec5369c2b1de2b73d2f623900240983cc68f2ec5b06f3a243249a0db"
+        },
+        {
+          "path": "outputs/final-package/reviewer-packet.pdf",
+          "sha256": "188e8ab28f7aa9023978f30d7fe90416c8a4400176f66c39869bce8b5ebe38f1"
+        },
+        {
+          "path": "outputs/final-package/demo.webm",
+          "sha256": "f5a1de14cbaea5a59d2a9a52368d2c4d8b6bd9cd8e32734032b6b8db872c9e5a"
+        },
+        {
+          "path": "outputs/final-package/social-cut.webm",
+          "sha256": "f6933637ca85fcc8c0e5eed4c3520cdf6f7b3d1a034042adb89e8cf50864bc5a"
+        },
+        {
+          "path": "outputs/final-package/demo.html",
+          "sha256": "e6022e9c38edf619b85f92f9a43663989cd858e8b1a668e03a634dc7568ca1e1"
+        },
+        {
+          "path": "outputs/final-package/demo-script.md",
+          "sha256": "fa3fa3fee0d5449f919ad5d40e37b13eba4f1d5d9538b9774a9d9e8efec54a77"
+        },
+        {
+          "path": "outputs/final-package/ai-contribution.md",
+          "sha256": "017d364365c88962ae3d086c96159a553ac4276535bb78f86070eef214158fd8"
+        },
+        {
+          "path": "outputs/final-package/validation-report.md",
+          "sha256": "d289709f9b3b098dab1ac001baf7d513319cfd6c24f6b98722563390f52b6d47"
+        },
+        {
+          "path": "outputs/final-package/overlap-reconciliation.csv",
+          "sha256": "566cbebb54722b1b19ab75bd1a6940fa62b8bbbeec158823db696fa8e1132b20"
+        },
+        {
+          "path": "outputs/final-package/bridge-attribution.csv",
+          "sha256": "ec3adcbd457f2344e9c77ce25c8dee7efbd3345b182f82a264abf51c9b425890"
+        },
+        {
+          "path": "outputs/final-package/planning-scenarios.csv",
+          "sha256": "3e684cc0175f772ff23fd7ad8a81da6a86b7e501862f9d0f95e751514de5d300"
+        },
+        {
+          "path": "outputs/final-package/definition-reconciliation.csv",
+          "sha256": "d5e44b9bfa1e1de012b3da06653e0210deb44f046a292869f807f20db13035ef"
+        }
+      ]
+    }
+  ]
+}

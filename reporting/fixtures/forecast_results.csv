@@ -1,0 +1,11 @@
+target_period,model_id,information_cutoff,predicted_revenue_mm,actual_revenue_mm,forecast_volume_bn,actual_volume_bn,forecast_yield_pct,actual_yield_pct,eligible_for_score,exclusion_reason,definition_family
+2024-06-30,prior_quarter,2024-05-15,1100,1250,,,,,TRUE,,synthetic_v1
+2024-06-30,prior_year,2024-05-15,980,1250,,,,,TRUE,,synthetic_v1
+2024-06-30,driver,2024-05-15,1200,1250,70,72,1.7142857143,1.7361111111,TRUE,,synthetic_v1
+2024-09-30,prior_quarter,2024-08-15,1250,1180,,,,,TRUE,,synthetic_v1
+2024-09-30,prior_year,2024-08-15,1050,1180,,,,,TRUE,,synthetic_v1
+2024-09-30,driver,2024-08-15,1215,1180,69,68,1.7608695652,1.7352941176,TRUE,,synthetic_v1
+2024-12-31,prior_quarter,2024-11-15,1180,1400,,,,,TRUE,,synthetic_v1
+2024-12-31,prior_year,2024-11-15,1150,1400,,,,,TRUE,,synthetic_v1
+2024-12-31,driver,2024-11-15,1360,1400,78,80,1.7435897436,1.75,TRUE,,synthetic_v1
+

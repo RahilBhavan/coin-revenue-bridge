@@ -1,0 +1,29 @@
+# Local runtimes and caches
+node_modules
+__pycache__/
+*.py[cod]
+
+# OS and editor state
+.DS_Store
+.idea/
+.vscode/
+
+# Workbook inspection scratch output
+*.inspect.ndjson
+
+# Regenerable intermediate files
+work/demo-frames/
+work/enhanced-analysis/
+work/real-reporting-inputs/
+work/reporting-validation/
+work/tmp/
+
+# Private career/networking research retained locally, not part of the case study
+02-research/prior-plans/
+
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key

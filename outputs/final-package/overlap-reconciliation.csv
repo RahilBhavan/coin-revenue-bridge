@@ -1,0 +1,17 @@
+metric_name,period_end,definition_family,occurrence_count,minimum,maximum,difference,sources,status
+consumer_trading_volume,2023-09-30,VOL-SPOT-MATCHED-PRE-2025Q4,2,11,11,0,q2-2024-shareholder-letter.html|q3-2024-shareholder-letter.html,PASS
+consumer_trading_volume,2023-12-31,VOL-SPOT-MATCHED-PRE-2025Q4,3,29,29,0,q2-2024-shareholder-letter.html|q3-2024-shareholder-letter.html|q4-2024-shareholder-letter.html,PASS
+consumer_trading_volume,2024-03-31,VOL-SPOT-MATCHED-PRE-2025Q4,4,56,56,0,q1-2025-shareholder-letter.html|q2-2024-shareholder-letter.html|q3-2024-shareholder-letter.html|q4-2024-shareholder-letter.html,PASS
+consumer_trading_volume,2024-06-30,VOL-SPOT-MATCHED-PRE-2025Q4,5,37,37,0,q1-2025-shareholder-letter.html|q2-2024-shareholder-letter.html|q2-2025-shareholder-letter.html|q3-2024-shareholder-letter.html|q4-2024-shareholder-letter.html,PASS
+consumer_trading_volume,2024-09-30,VOL-SPOT-MATCHED-PRE-2025Q4,5,34,34,0,q1-2025-shareholder-letter.html|q2-2025-shareholder-letter.html|q3-2024-shareholder-letter.html|q3-2025-shareholder-letter.html|q4-2024-shareholder-letter.html,PASS
+consumer_trading_volume,2024-12-31,VOL-SPOT-MATCHED-PRE-2025Q4,4,94,94,0,q1-2025-shareholder-letter.html|q2-2025-shareholder-letter.html|q3-2025-shareholder-letter.html|q4-2024-shareholder-letter.html,PASS
+consumer_trading_volume,2025-03-31,VOL-SPOT-MATCHED-PRE-2025Q4,3,78,78,0,q1-2025-shareholder-letter.html|q2-2025-shareholder-letter.html|q3-2025-shareholder-letter.html,PASS
+consumer_trading_volume,2025-06-30,VOL-SPOT-MATCHED-PRE-2025Q4,2,43,43,0,q2-2025-shareholder-letter.html|q3-2025-shareholder-letter.html,PASS
+consumer_transaction_revenue,2023-09-30,REV-POST-2024Q1,2,247.0,247.0,0.0,q2-2024-shareholder-letter.html|q3-2024-shareholder-letter.html,PASS
+consumer_transaction_revenue,2023-12-31,REV-POST-2024Q1,3,468.9,468.9,0.0,q2-2024-shareholder-letter.html|q3-2024-shareholder-letter.html|q4-2024-shareholder-letter.html,PASS
+consumer_transaction_revenue,2024-03-31,REV-POST-2024Q1,4,935.2,935.2,0.0,q1-2025-shareholder-letter.html|q2-2024-shareholder-letter.html|q3-2024-shareholder-letter.html|q4-2024-shareholder-letter.html,PASS
+consumer_transaction_revenue,2024-06-30,REV-POST-2024Q1,5,664.8,664.8,0.0,q1-2025-shareholder-letter.html|q2-2024-shareholder-letter.html|q2-2025-shareholder-letter.html|q3-2024-shareholder-letter.html|q4-2024-shareholder-letter.html,PASS
+consumer_transaction_revenue,2024-09-30,REV-POST-2024Q1,5,483.3,483.3,0.0,q1-2025-shareholder-letter.html|q2-2025-shareholder-letter.html|q3-2024-shareholder-letter.html|q3-2025-shareholder-letter.html|q4-2024-shareholder-letter.html,PASS
+consumer_transaction_revenue,2024-12-31,REV-POST-2024Q1,4,1347.1,1347.1,0.0,q1-2025-shareholder-letter.html|q2-2025-shareholder-letter.html|q3-2025-shareholder-letter.html|q4-2024-shareholder-letter.html,PASS
+consumer_transaction_revenue,2025-03-31,REV-POST-2024Q1,3,1095.5,1095.5,0.0,q1-2025-shareholder-letter.html|q2-2025-shareholder-letter.html|q3-2025-shareholder-letter.html,PASS
+consumer_transaction_revenue,2025-06-30,REV-POST-2024Q1,2,649.9,649.9,0.0,q2-2025-shareholder-letter.html|q3-2025-shareholder-letter.html,PASS

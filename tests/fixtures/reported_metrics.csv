@@ -1,0 +1,15 @@
+observation_id,metric_name,period_start,period_end,value_decimal,currency,scale,definition_id,definition_family,original_or_recast,source_id,published_at,evidence_class,reviewer_status
+r1,consumer_transaction_revenue,2023-10-01,2023-12-31,90,USD,millions,revenue_v1,consumer_v1,original,s1,2024-02-01,synthetic_fixture,reviewed
+v1,consumer_trading_volume,2023-10-01,2023-12-31,900,USD,millions,volume_v1,consumer_v1,original,s1,2024-02-01,synthetic_fixture,reviewed
+r2,consumer_transaction_revenue,2024-01-01,2024-03-31,100,USD,millions,revenue_v1,consumer_v1,original,s2,2024-05-01,synthetic_fixture,reviewed
+v2,consumer_trading_volume,2024-01-01,2024-03-31,1000,USD,millions,volume_v1,consumer_v1,original,s2,2024-05-01,synthetic_fixture,reviewed
+r3,consumer_transaction_revenue,2024-04-01,2024-06-30,120,USD,millions,revenue_v1,consumer_v1,original,s3,2024-08-01,synthetic_fixture,reviewed
+v3,consumer_trading_volume,2024-04-01,2024-06-30,1000,USD,millions,volume_v1,consumer_v1,original,s3,2024-08-01,synthetic_fixture,reviewed
+r4,consumer_transaction_revenue,2024-07-01,2024-09-30,120,USD,millions,revenue_v1,consumer_v1,original,s4,2024-11-01,synthetic_fixture,reviewed
+v4,consumer_trading_volume,2024-07-01,2024-09-30,1000,USD,millions,volume_v1,consumer_v1,original,s4,2024-11-01,synthetic_fixture,reviewed
+r5,consumer_transaction_revenue,2024-10-01,2024-12-31,144,USD,millions,revenue_v1,consumer_v1,original,s5,2025-02-01,synthetic_fixture,reviewed
+v5,consumer_trading_volume,2024-10-01,2024-12-31,1200,USD,millions,volume_v1,consumer_v1,original,s5,2025-02-01,synthetic_fixture,reviewed
+r6,consumer_transaction_revenue,2025-01-01,2025-03-31,169,USD,millions,revenue_v1,consumer_v1,original,s6,2025-05-01,synthetic_fixture,reviewed
+v6,consumer_trading_volume,2025-01-01,2025-03-31,1300,USD,millions,volume_v1,consumer_v1,original,s6,2025-05-01,synthetic_fixture,reviewed
+r7,consumer_transaction_revenue,2025-01-01,2025-03-31,170,USD,millions,revenue_v2,consumer_v2,recast,s7,2025-05-02,synthetic_fixture,reviewed
+v7,consumer_trading_volume,2025-01-01,2025-03-31,1300,USD,millions,volume_v2,consumer_v2,recast,s7,2025-05-02,synthetic_fixture,reviewed

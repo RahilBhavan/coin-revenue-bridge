@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "deterministic-from-inputs",
+  "status_label": "SAMPLE / NOT FOR SHARING",
+  "definition_family": "synthetic_v1",
+  "featured_period": "2024-12-31",
+  "information_cutoff": "2024-11-15",
+  "inputs": [
+    {
+      "role": "processed_metrics",
+      "path": "reporting/fixtures/processed_metrics.csv",
+      "sha256": "54cfea459f140f98494124e1bf1d09a14a124540cd2a4918f41b9cd06e55281c",
+      "rows": 4
+    },
+    {
+      "role": "forecast_results",
+      "path": "reporting/fixtures/forecast_results.csv",
+      "sha256": "2d61b5a6e9b961479594aa1a2c3868e6266b858e6dc0ea42e8b829089db9b4eb",
+      "rows": 9
+    }
+  ],
+  "outputs": [
+    {
+      "path": "revenue-model.xlsx",
+      "sha256": "2df65cd6928301020ea891c7441a8067456dd96496c07625349d21ac4ed3d775"
+    },
+    {
+      "path": "forecast-review.png",
+      "sha256": "70c0e898a33a7bbbd7b8846b0a657d1feb2010671afb6c5902b8d3db4adcbc51"
+    },
+    {
+      "path": "decision-memo.md",
+      "sha256": "053a77bb34a6c62f09d688aad4ce1a7c441cbf9160a53736730d7a3deb786e45"
+    },
+    {
+      "path": "reviewer-packet.md",
+      "sha256": "063678229b569b0e46e0786f83abec197ada4321459371cb403ffc2b9d6ca545"
+    }
+  ],
+  "workbook": {
+    "sheets": [
+      "Forecast Review",
+      "Forecast Build",
+      "Metric Inputs"
+    ],
+    "formula_error_scan": "PASS",
+    "inspected_range": "Forecast Review!C2:J24"
+  },
+  "caveats": [
+    "All values are synthetic fixtures and must not be cited as Coinbase results.",
+    "Workbook formulas were calculated in the bundled artifact runtime; validate in the intended desktop spreadsheet engine before external use."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "file_count": 5,
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 274,
+      "sha256": "d3399a670ee7065d635d5dac3c2a038df0db8e3d49a6eb41e3b565ce5a1f1686"
+    },
+    {
+      "path": "decision-memo.pdf",
+      "bytes": 70549,
+      "sha256": "e986b005ec5369c2b1de2b73d2f623900240983cc68f2ec5b06f3a243249a0db"
+    },
+    {
+      "path": "practitioner-review.md",
+      "bytes": 1299,
+      "sha256": "d5a1e079ab0a462ca905140e2da92cd85ecf303de73d149be9671fd407a1936f"
+    },
+    {
+      "path": "revenue-analysis.xlsx",
+      "bytes": 18111,
+      "sha256": "264cd064032a9fae41b75c479eed61f94ad2c15f53ed520739096a78520bcbd3"
+    },
+    {
+      "path": "reviewer-packet.pdf",
+      "bytes": 70553,
+      "sha256": "188e8ab28f7aa9023978f30d7fe90416c8a4400176f66c39869bce8b5ebe38f1"
+    }
+  ]
+}

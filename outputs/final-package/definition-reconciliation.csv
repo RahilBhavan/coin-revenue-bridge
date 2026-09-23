@@ -1,0 +1,4 @@
+period,earlier_reported_volume_bn,later_recast_volume_bn,change_bn,change_pct,earlier_source_id,later_source_id,definition_note
+2025-Q2,43.0,41.5,-1.5,-0.03488372,SRC-Q2-2025,SRC-Q2-2026-DECK,Later deck adjusts the series for stablecoin activity; do not splice into the pre-Q4 2025 panel.
+2025-Q3,59.0,57.4,-1.6,-0.02711864,SRC-Q3-2025,SRC-Q2-2026-DECK,Later deck adjusts the series for stablecoin activity; preserve both vintages.
+2025-Q4,56.0,53.7,-2.3,-0.04107143,SRC-Q4-2025,SRC-Q2-2026-DECK,Q4 letter used the routed-volume definition; the later deck made a further stablecoin adjustment.

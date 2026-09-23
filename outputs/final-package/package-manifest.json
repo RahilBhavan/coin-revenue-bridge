@@ -1,0 +1,203 @@
+{
+  "schema_version": "1.0",
+  "status": "DESCRIPTIVE / NOT A FORECAST",
+  "evidence_cutoff": "2026-09-20",
+  "file_count": 39,
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 2719,
+      "sha256": "ecf57e593d5df70e351bd83b4306ba036576d2d262449ec591d858c19b31aec7"
+    },
+    {
+      "path": "ai-contribution.md",
+      "bytes": 2639,
+      "sha256": "017d364365c88962ae3d086c96159a553ac4276535bb78f86070eef214158fd8"
+    },
+    {
+      "path": "analysis.sql",
+      "bytes": 1808,
+      "sha256": "0de6f5709ce312c00fb89c807e2ab67af5e5ea56254ef2e40d80310b7e267611"
+    },
+    {
+      "path": "analytics-ready-metrics.csv",
+      "bytes": 3826,
+      "sha256": "8513451f90b5b44a82b17006b1ae95755675b8d499d0874a53c46a3d25e52b78"
+    },
+    {
+      "path": "bridge-attribution.csv",
+      "bytes": 438,
+      "sha256": "ec3adcbd457f2344e9c77ce25c8dee7efbd3345b182f82a264abf51c9b425890"
+    },
+    {
+      "path": "bridge-attribution.png",
+      "bytes": 151030,
+      "sha256": "ed82147e806d309c7f073dd7b6de4bb0e4d0e1d3289de6350e8edf8450ec1b5d"
+    },
+    {
+      "path": "decision-memo.pdf",
+      "bytes": 70549,
+      "sha256": "e986b005ec5369c2b1de2b73d2f623900240983cc68f2ec5b06f3a243249a0db"
+    },
+    {
+      "path": "definition-reconciliation.csv",
+      "bytes": 594,
+      "sha256": "d5e44b9bfa1e1de012b3da06653e0210deb44f046a292869f807f20db13035ef"
+    },
+    {
+      "path": "definition-reconciliation.png",
+      "bytes": 187996,
+      "sha256": "3e4e42d7c0ef0553eaf51639fc277843defffab928281bdf75d23369b63658b1"
+    },
+    {
+      "path": "demo-script.md",
+      "bytes": 3424,
+      "sha256": "fa3fa3fee0d5449f919ad5d40e37b13eba4f1d5d9538b9774a9d9e8efec54a77"
+    },
+    {
+      "path": "demo.html",
+      "bytes": 11175,
+      "sha256": "e6022e9c38edf619b85f92f9a43663989cd858e8b1a668e03a634dc7568ca1e1"
+    },
+    {
+      "path": "demo.webm",
+      "bytes": 892744,
+      "sha256": "f5a1de14cbaea5a59d2a9a52368d2c4d8b6bd9cd8e32734032b6b8db872c9e5a"
+    },
+    {
+      "path": "descriptive-bridge.csv",
+      "bytes": 423,
+      "sha256": "02379c0d786f0aa275f531f7b2889f3f7c863591c352362cc0256e481b7a6d5f"
+    },
+    {
+      "path": "overlap-reconciliation.csv",
+      "bytes": 3152,
+      "sha256": "566cbebb54722b1b19ab75bd1a6940fa62b8bbbeec158823db696fa8e1132b20"
+    },
+    {
+      "path": "planning-scenarios.csv",
+      "bytes": 747,
+      "sha256": "3e684cc0175f772ff23fd7ad8a81da6a86b7e501862f9d0f95e751514de5d300"
+    },
+    {
+      "path": "planning-sensitivity.png",
+      "bytes": 237046,
+      "sha256": "6d8e189cd8c4613be2a81b6bf3f6d2003b25b363ce83e9b3dded1675fc11bf63"
+    },
+    {
+      "path": "raw-sources/coin-20251231-10k.html",
+      "bytes": 3217081,
+      "sha256": "54b98a8bacc795a1fc0bb65613793ce18a172c276b5cb399f3c6cbc24208d688"
+    },
+    {
+      "path": "raw-sources/q1-2024-shareholder-letter.html",
+      "bytes": 73487,
+      "sha256": "072570b217459612c2b179559c77fd8ca93dde3c51d14236978edb9ffdc1b7a6"
+    },
+    {
+      "path": "raw-sources/q1-2025-shareholder-letter.html",
+      "bytes": 1338420,
+      "sha256": "f85512aabb5d31be302675a5093344d1c2089600ed6ba49ecd45b850ab86db30"
+    },
+    {
+      "path": "raw-sources/q2-2024-shareholder-letter.html",
+      "bytes": 492473,
+      "sha256": "c4ad14ec78894a3f7f0bf53bb94272c67ca759cfb4e9d77f762dae0db072d983"
+    },
+    {
+      "path": "raw-sources/q2-2025-shareholder-letter.html",
+      "bytes": 1458651,
+      "sha256": "1af6ae1124356154d6583437e5d3ebc91acab60f73b9809756a6ed5ab14d578b"
+    },
+    {
+      "path": "raw-sources/q2-2026-earnings-deck.html",
+      "bytes": 91343,
+      "sha256": "b5b9dc79294f182b330ffaedc5ef6904f1488b79299674df26f95ce7ea103087"
+    },
+    {
+      "path": "raw-sources/q3-2023-shareholder-letter.html",
+      "bytes": 80087,
+      "sha256": "f6ebbe03dd52843830b408e76a18a034157c2c7f2e99658677df17d9deef39d8"
+    },
+    {
+      "path": "raw-sources/q3-2024-shareholder-letter.html",
+      "bytes": 1335859,
+      "sha256": "7c2282bd50be02157f5e1dfe27456fbad2bc88c8339b7d93201818aef2b9ffb1"
+    },
+    {
+      "path": "raw-sources/q3-2025-shareholder-letter.html",
+      "bytes": 1325895,
+      "sha256": "c8cac51f49e803d015b3200bfba32be8a2fee23a77e5a3eb8d7e119b199e0a51"
+    },
+    {
+      "path": "raw-sources/q4-2023-shareholder-letter.html",
+      "bytes": 84989,
+      "sha256": "802d0ea566d55506930102bf4eaefe702dfa0c4e17ff11b2721f1b20a0d48fef"
+    },
+    {
+      "path": "raw-sources/q4-2024-shareholder-letter.html",
+      "bytes": 1650202,
+      "sha256": "7901f5d834ac27f9de99ceddb62e7fa734e56c004ae208be30680103f4202304"
+    },
+    {
+      "path": "raw-sources/q4-2025-shareholder-letter.html",
+      "bytes": 1381129,
+      "sha256": "54401431cd806489a45cdcdce3940d659906db19a63ea18ccd99de7c07f07f0a"
+    },
+    {
+      "path": "raw-sources/sec-submissions-cik0001679788.json",
+      "bytes": 159340,
+      "sha256": "7c185c66912c187879de4163569920b4d34b04771a517860cca1b992eb67615c"
+    },
+    {
+      "path": "reported-metrics.csv",
+      "bytes": 5450,
+      "sha256": "87e869203121d6610d57c57c26ba967e931fbeb4e6ee19009ad770a2a999b1a9"
+    },
+    {
+      "path": "reproduce.py",
+      "bytes": 1398,
+      "sha256": "d97a3a7df9757d287f82fc92936487b4b583d7866cfd282affea603860ce6304"
+    },
+    {
+      "path": "revenue-analysis.xlsx",
+      "bytes": 18111,
+      "sha256": "264cd064032a9fae41b75c479eed61f94ad2c15f53ed520739096a78520bcbd3"
+    },
+    {
+      "path": "reviewer-packet.pdf",
+      "bytes": 70553,
+      "sha256": "188e8ab28f7aa9023978f30d7fe90416c8a4400176f66c39869bce8b5ebe38f1"
+    },
+    {
+      "path": "schema.sql",
+      "bytes": 463,
+      "sha256": "4c33905048f74cbfe639ca8f7b9e8d8be006149b17c6397d6333930564f9a5ca"
+    },
+    {
+      "path": "social-cut.webm",
+      "bytes": 406729,
+      "sha256": "f6933637ca85fcc8c0e5eed4c3520cdf6f7b3d1a034042adb89e8cf50864bc5a"
+    },
+    {
+      "path": "source-register.csv",
+      "bytes": 6477,
+      "sha256": "8fac4246624c146026d7ce4b88e80af2b9d76610675f2c319a406b2ced0671ea"
+    },
+    {
+      "path": "validation-evidence.json",
+      "bytes": 4208,
+      "sha256": "6df9eb4d5c11c4d6b0beee9a1ff40a8c1c9d599d46611a50fa03736bb0144b29"
+    },
+    {
+      "path": "validation-report.md",
+      "bytes": 7819,
+      "sha256": "d289709f9b3b098dab1ac001baf7d513319cfd6c24f6b98722563390f52b6d47"
+    },
+    {
+      "path": "workbook-preview.png",
+      "bytes": 343011,
+      "sha256": "21aa370fe528013269347ca3d4300e9de5e0a98c47e0dbef78d4b7fb4ba66c61"
+    }
+  ]
+}

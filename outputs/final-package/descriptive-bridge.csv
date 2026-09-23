@@ -1,0 +1,2 @@
+comparison_id,from_period,to_period,from_revenue_mm,to_revenue_mm,from_volume_bn,to_volume_bn,from_yield_pct,to_yield_pct,definition_family,evidence_label,source_reference
+2024-09-30_to_2024-12-31,2024-09-30,2024-12-31,483.3,1347.1,34,94,1.421470588235294117647058824,1.433085106382978723404255319,PAIR-REV-POST2024Q1-VOL-SPOT-PRE2025Q4,descriptive calculation from reported/recast public filing values,source-register.csv
