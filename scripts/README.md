@@ -9,7 +9,7 @@ Run the automated suite:
 python3 -m unittest discover -s tests -v
 ```
 
-Run one fixture forecast and exact bridge without writing portfolio artifacts:
+Run one fixture forecast and exact bridge without writing package artifacts:
 
 ```sh
 python3 scripts/analyze.py \
@@ -51,4 +51,4 @@ python3 scripts/descriptive_bridge.py \
 Use `--format csv` for a one-row reporting feed. Both formats label the analysis
 as descriptive and include explicit revenue, volume, and effective-yield units.
 Forecast-eligible real data also requires at least 12 comparable historical
-quarters; synthetic test rows are isolated from that portfolio-readiness gate.
+quarters; synthetic test rows are isolated from that release-readiness gate.

@@ -8,8 +8,8 @@
     },
     {
       "path": "decision-memo.pdf",
-      "bytes": 70549,
-      "sha256": "e986b005ec5369c2b1de2b73d2f623900240983cc68f2ec5b06f3a243249a0db"
+      "bytes": 70519,
+      "sha256": "4420f0b69d53cacab8cab81774ba2d986d3c4476f39f8153ea3c5ed9db8f81c6"
     },
     {
       "path": "practitioner-review.md",
@@ -18,13 +18,13 @@
     },
     {
       "path": "revenue-analysis.xlsx",
-      "bytes": 18111,
-      "sha256": "264cd064032a9fae41b75c479eed61f94ad2c15f53ed520739096a78520bcbd3"
+      "bytes": 18101,
+      "sha256": "1dc95888e68a49ddf07ce75403b03812ef462ffacd0a61704620ee75353f7e46"
     },
     {
       "path": "reviewer-packet.pdf",
-      "bytes": 70553,
-      "sha256": "188e8ab28f7aa9023978f30d7fe90416c8a4400176f66c39869bce8b5ebe38f1"
+      "bytes": 70531,
+      "sha256": "c90ed7d16898988e0b6787e08709fa25cdf373bdce2a8caf672a808cbc471e3f"
     }
   ]
 }

@@ -6,13 +6,13 @@
   "files": [
     {
       "path": "README.md",
-      "bytes": 2783,
-      "sha256": "d5d12b13c00b324454aec4693f4f6ff1786843f071275be0f984d58c0f00c773"
+      "bytes": 2780,
+      "sha256": "127f5457bdb75f53e349c109116f1475d9b52aa5010086c64793a698b3bebff2"
     },
     {
       "path": "ai-contribution.md",
-      "bytes": 2440,
-      "sha256": "225639bf850769866dcbd17700c6ddb62c39223cdec900277119c96a22ad604c"
+      "bytes": 2430,
+      "sha256": "2e87dd8b820f4c2e43bf087b9f86eeab21cca290c47f6406b8c85025210f73f3"
     },
     {
       "path": "analysis.sql",
@@ -36,8 +36,8 @@
     },
     {
       "path": "decision-memo.pdf",
-      "bytes": 70549,
-      "sha256": "e986b005ec5369c2b1de2b73d2f623900240983cc68f2ec5b06f3a243249a0db"
+      "bytes": 70519,
+      "sha256": "4420f0b69d53cacab8cab81774ba2d986d3c4476f39f8153ea3c5ed9db8f81c6"
     },
     {
       "path": "definition-reconciliation.csv",
@@ -56,8 +56,8 @@
     },
     {
       "path": "demo.html",
-      "bytes": 11175,
-      "sha256": "e6022e9c38edf619b85f92f9a43663989cd858e8b1a668e03a634dc7568ca1e1"
+      "bytes": 11172,
+      "sha256": "a05020373bc3d8b81aa81caea223b932e2848af8a49d1d5cfab56aaefbb88114"
     },
     {
       "path": "demo.webm",
@@ -166,8 +166,8 @@
     },
     {
       "path": "reviewer-packet.pdf",
-      "bytes": 70553,
-      "sha256": "188e8ab28f7aa9023978f30d7fe90416c8a4400176f66c39869bce8b5ebe38f1"
+      "bytes": 70531,
+      "sha256": "c90ed7d16898988e0b6787e08709fa25cdf373bdce2a8caf672a808cbc471e3f"
     },
     {
       "path": "schema.sql",
@@ -192,12 +192,12 @@
     {
       "path": "validation-evidence.json",
       "bytes": 4352,
-      "sha256": "f0a68cc06cf3e4894e99beeb2d870a26453846de7d13827e65fcb0ea0fed89f1"
+      "sha256": "767e51eb1aae03b2018cc153f26c00091c5ff988c8d9fd0ae006ee801218c88b"
     },
     {
       "path": "validation-report.md",
-      "bytes": 7822,
-      "sha256": "a278aa0020c1da4caff63ed342ef0eb46781e4a89f93cee257bf70cc8eb3a61c"
+      "bytes": 7820,
+      "sha256": "6ebd8d552158181ee45918e4c0a88012263003e322e7610d3d678851a23466e2"
     },
     {
       "path": "workbook-preview.png",

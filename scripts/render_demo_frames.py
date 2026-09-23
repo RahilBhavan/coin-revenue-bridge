@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render deterministic 1280×720 captioned PNG frames for the portfolio demo."""
+"""Render deterministic 1280×720 captioned PNG frames for the evidence demo."""
 
 from __future__ import annotations
 

@@ -2,7 +2,7 @@
 
 ## Disclosure
 
-This portfolio project was developed with substantial AI assistance. AI was used as an implementation and review tool; the public filings and generated artifacts—not the model’s prose—are the evidence base. A reviewer should evaluate the workbook, source register, code, and validation outputs directly.
+This project was developed with substantial AI assistance. AI was used as an implementation and review tool; the public filings and generated artifacts—not the model’s prose—are the evidence base. A reviewer should evaluate the workbook, source register, code, and validation outputs directly.
 
 ## What AI contributed
 

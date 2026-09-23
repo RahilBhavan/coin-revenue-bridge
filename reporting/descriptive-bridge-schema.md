@@ -41,6 +41,6 @@ Use `--label "SAMPLE / NOT FOR SHARING"` only with synthetic fixture data.
 
 The generated workbook also reads the checked-in reviewed observation register
 and source register to populate the reporting-definition appendix and source
-URLs. The real portfolio build requires all nine comparable quarters in the
+URLs. The real build requires all nine comparable quarters in the
 processed metrics input. Fixture builds may use a shorter series to test the
 generation path.

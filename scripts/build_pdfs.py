@@ -94,7 +94,7 @@ class ReportDoc(BaseDocTemplate):
     def __init__(self, filename, doc_label):
         super().__init__(filename, pagesize=letter, rightMargin=0.58 * inch, leftMargin=0.58 * inch,
                          topMargin=0.76 * inch, bottomMargin=0.52 * inch, title=doc_label,
-                         author="Coinbase Strategic Finance portfolio project")
+                         author="Rahil Bhavan")
         self.doc_label = doc_label
         frame = Frame(self.leftMargin, self.bottomMargin, self.width, self.height, id="body")
         self.addPageTemplates(PageTemplate(id="main", frames=[frame], onPage=self.draw_page))
@@ -107,7 +107,7 @@ class ReportDoc(BaseDocTemplate):
         canvas.line(self.leftMargin, 0.38 * inch, letter[0] - self.rightMargin, 0.38 * inch)
         canvas.setFont(FONT, 6.8)
         canvas.setFillColor(MUTED)
-        canvas.drawString(self.leftMargin, 0.22 * inch, "Coinbase Strategic Finance | Independent portfolio analysis")
+        canvas.drawString(self.leftMargin, 0.22 * inch, "Independent analysis of Coinbase public filings | Rahil Bhavan")
         canvas.drawRightString(letter[0] - self.rightMargin, 0.22 * inch,
                                f"{self.doc_label}  |  {doc.page} / 2")
         canvas.restoreState()

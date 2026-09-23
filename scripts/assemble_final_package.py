@@ -30,7 +30,7 @@ COPIES = {
 }
 
 
-README = """# Coinbase Strategic Finance portfolio package
+README = """# Coinbase revenue bridge: analysis package
 
 Status: **DESCRIPTIVE / NOT A FORECAST**  
 Evidence cutoff: **September 20, 2026**

@@ -2,7 +2,7 @@
 
 **Run date:** 2026-09-20  
 **Scope:** public-data descriptive bridge and final-package claims  
-**Overall verdict:** **PASS for a descriptive portfolio artifact; NOT RUN for forecast-performance gates.**  
+**Overall verdict:** **PASS for a descriptive analysis package; NOT RUN for forecast-performance gates.**  
 **Required label:** **DESCRIPTIVE / NOT A FORECAST**
 
 The evidence gate changed the deliverable. Only nine comparable paired quarters were available against a predeclared twelve-quarter minimum, so no production forecast was fit or scored. Forecast-only checks remain visible below as `NOT RUN`; they were not silently deleted or converted into passes.
