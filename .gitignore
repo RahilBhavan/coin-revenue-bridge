@@ -18,7 +18,7 @@ work/real-reporting-inputs/
 work/reporting-validation/
 work/tmp/
 
-# Private career/networking research retained locally, not part of the case study
+# Local-only notes, not part of the project
 02-research/prior-plans/
 outputs/twitter-rollout-plan.md
 outputs/x-rollout-alt-text.md
