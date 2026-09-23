@@ -113,11 +113,11 @@
         },
         {
           "path": "outputs/final-package/demo.webm",
-          "sha256": "f5a1de14cbaea5a59d2a9a52368d2c4d8b6bd9cd8e32734032b6b8db872c9e5a"
+          "sha256": "928b422c871f045987a77f3259df2bfcaf6d450528b0ec75a9da54516a5ac12c"
         },
         {
           "path": "outputs/final-package/social-cut.webm",
-          "sha256": "f6933637ca85fcc8c0e5eed4c3520cdf6f7b3d1a034042adb89e8cf50864bc5a"
+          "sha256": "3aa8604ebcf4fde601c051aafb49ca568cf29bde5f193add7f8878df2260bd9b"
         },
         {
           "path": "outputs/final-package/demo.html",

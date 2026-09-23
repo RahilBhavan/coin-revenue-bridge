@@ -1,3 +1,4 @@
+import { execFileSync } from "node:child_process";
 import crypto from "node:crypto";
 import fs from "node:fs/promises";
 import path from "node:path";
@@ -241,6 +242,7 @@ const preview = await workbook.render({ sheetName: "Forecast Review", range: "C2
 await fs.writeFile(previewPath, new Uint8Array(await preview.arrayBuffer()));
 const output = await SpreadsheetFile.exportXlsx(workbook);
 await output.save(workbookPath);
+execFileSync("python3", [path.join(projectRoot, "scripts/scrub_workbook_metadata.py"), workbookPath], { stdio: "inherit" });
 
 const driverEligible = forecasts.filter((row) => row.model_id === "driver" && truth(row.eligible_for_score));
 const driverMae = driverEligible.reduce((sum, row) => sum + Math.abs(number(row.predicted_revenue_mm, "predicted") - number(row.actual_revenue_mm, "actual")), 0) / driverEligible.length;

@@ -63,7 +63,7 @@ def main():
     shapley_yld = (yld + alt_yld) / Decimal(2)
 
     frames = []
-    im, d = base("Strategic Finance · public evidence", "Explain the change.\nDon’t invent a forecast.", "The public evidence supported a narrower—and more defensible—decision tool.")
+    im, d = base("Independent analysis · Public evidence", "Explain the change.\nDon’t invent a forecast.", "The public evidence supported a narrower—and more defensible—decision tool.")
     d.rounded_rectangle((74, 410, 535, 475), 10, outline="#ffc857", width=3); d.text((94, 427), "DESCRIPTIVE / NOT A FORECAST", font=font(22, True), fill="#ffc857"); frames.append(im)
 
     im, d = base("1 · Evidence before output", "Thirteen SEC sources. Every source frozen and hashed.", "The twelve-quarter forecast gate failed, so no forecast accuracy is claimed.")

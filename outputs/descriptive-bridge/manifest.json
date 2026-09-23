@@ -40,11 +40,11 @@
   "outputs": [
     {
       "path": "descriptive-revenue-bridge.xlsx",
-      "sha256": "1dc95888e68a49ddf07ce75403b03812ef462ffacd0a61704620ee75353f7e46"
+      "sha256": "be339d3d84eb20eb7c9e0e3e2e73ec7681ba51194c72b4cff2d95b0597cfeaf6"
     },
     {
       "path": "descriptive-review.png",
-      "sha256": "21aa370fe528013269347ca3d4300e9de5e0a98c47e0dbef78d4b7fb4ba66c61"
+      "sha256": "f971d0012ed33a8140696ce6c867049f91ae2dcf03ba1c056991d594cbb92acd"
     },
     {
       "path": "descriptive-memo.md",
@@ -56,15 +56,15 @@
     },
     {
       "path": "planning-sensitivity.png",
-      "sha256": "6d8e189cd8c4613be2a81b6bf3f6d2003b25b363ce83e9b3dded1675fc11bf63"
+      "sha256": "c2d71b197cc7da5bb8b5b13a87ee7e49ca88d5ab493574cc30554f052d7f7dda"
     },
     {
       "path": "bridge-attribution.png",
-      "sha256": "ed82147e806d309c7f073dd7b6de4bb0e4d0e1d3289de6350e8edf8450ec1b5d"
+      "sha256": "ba75bd9c49dcbca8896a9c1102f33b26370eee59cd7de8b43d156758ab0a8874"
     },
     {
       "path": "definition-reconciliation.png",
-      "sha256": "3e4e42d7c0ef0553eaf51639fc277843defffab928281bdf75d23369b63658b1"
+      "sha256": "6fbdfdd3b26f7ab3f97758fdb92d827d251101b36b970e3b56d6710d39e74cae"
     }
   ],
   "caveat": "Descriptive algebraic decomposition and illustrative sensitivity analysis; not a forecast and not causal evidence."

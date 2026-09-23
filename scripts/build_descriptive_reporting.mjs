@@ -1,3 +1,4 @@
+import { execFileSync } from "node:child_process";
 import crypto from "node:crypto";
 import fs from "node:fs/promises";
 import path from "node:path";
@@ -185,6 +186,7 @@ if (/\"address\"/.test(errors.ndjson)) throw new Error(`Formula errors: ${errors
 await fs.mkdir(outputDir, { recursive: true });
 const workbookPath = path.join(outputDir, "descriptive-revenue-bridge.xlsx");
 const xlsx = await SpreadsheetFile.exportXlsx(workbook); await xlsx.save(workbookPath);
+execFileSync("python3", [path.join(projectRoot, "scripts/scrub_workbook_metadata.py"), workbookPath], { stdio: "inherit" });
 const renderTargets = [["Descriptive Review", "descriptive-review.png"], ["Bridge Calculation", "bridge-calculation.png"], ["Definition Appendix", "definition-appendix.png"], ["Metric Inputs", "metric-inputs.png"]];
 if (enhancedDir) renderTargets.splice(1, 0, ["Planning Sensitivity", "planning-sensitivity.png"], ["Bridge Attribution", "bridge-attribution.png"], ["Definition Reconciliation", "definition-reconciliation.png"]);
 for (const [sheetName, fileName] of renderTargets) { const rendered = await workbook.render({ sheetName, autoCrop: "all", scale: 1.4, format: "png" }); await fs.writeFile(path.join(outputDir, fileName), new Uint8Array(await rendered.arrayBuffer())); }

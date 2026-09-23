@@ -31,8 +31,8 @@
     },
     {
       "path": "bridge-attribution.png",
-      "bytes": 151030,
-      "sha256": "ed82147e806d309c7f073dd7b6de4bb0e4d0e1d3289de6350e8edf8450ec1b5d"
+      "bytes": 149876,
+      "sha256": "ba75bd9c49dcbca8896a9c1102f33b26370eee59cd7de8b43d156758ab0a8874"
     },
     {
       "path": "decision-memo.pdf",
@@ -46,8 +46,8 @@
     },
     {
       "path": "definition-reconciliation.png",
-      "bytes": 187996,
-      "sha256": "3e4e42d7c0ef0553eaf51639fc277843defffab928281bdf75d23369b63658b1"
+      "bytes": 187082,
+      "sha256": "6fbdfdd3b26f7ab3f97758fdb92d827d251101b36b970e3b56d6710d39e74cae"
     },
     {
       "path": "demo-script.md",
@@ -61,8 +61,8 @@
     },
     {
       "path": "demo.webm",
-      "bytes": 892744,
-      "sha256": "f5a1de14cbaea5a59d2a9a52368d2c4d8b6bd9cd8e32734032b6b8db872c9e5a"
+      "bytes": 800417,
+      "sha256": "928b422c871f045987a77f3259df2bfcaf6d450528b0ec75a9da54516a5ac12c"
     },
     {
       "path": "descriptive-bridge.csv",
@@ -81,8 +81,8 @@
     },
     {
       "path": "planning-sensitivity.png",
-      "bytes": 237046,
-      "sha256": "6d8e189cd8c4613be2a81b6bf3f6d2003b25b363ce83e9b3dded1675fc11bf63"
+      "bytes": 235999,
+      "sha256": "c2d71b197cc7da5bb8b5b13a87ee7e49ca88d5ab493574cc30554f052d7f7dda"
     },
     {
       "path": "raw-sources/coin-20251231-10k.html",
@@ -161,8 +161,8 @@
     },
     {
       "path": "revenue-analysis.xlsx",
-      "bytes": 18101,
-      "sha256": "1dc95888e68a49ddf07ce75403b03812ef462ffacd0a61704620ee75353f7e46"
+      "bytes": 18113,
+      "sha256": "be339d3d84eb20eb7c9e0e3e2e73ec7681ba51194c72b4cff2d95b0597cfeaf6"
     },
     {
       "path": "reviewer-packet.pdf",
@@ -176,13 +176,13 @@
     },
     {
       "path": "social-cut.mp4",
-      "bytes": 278110,
-      "sha256": "981ac0628899f0d1f5cfc5a02c71e02052dc5df48fa3cc0e57019ff26ff15e05"
+      "bytes": 217199,
+      "sha256": "ccb03e374ed0ab6962f26608d4287d5ad18bf580550d2b3a8d5a8ac143020ff7"
     },
     {
       "path": "social-cut.webm",
-      "bytes": 406729,
-      "sha256": "f6933637ca85fcc8c0e5eed4c3520cdf6f7b3d1a034042adb89e8cf50864bc5a"
+      "bytes": 296720,
+      "sha256": "3aa8604ebcf4fde601c051aafb49ca568cf29bde5f193add7f8878df2260bd9b"
     },
     {
       "path": "source-register.csv",
@@ -192,7 +192,7 @@
     {
       "path": "validation-evidence.json",
       "bytes": 4352,
-      "sha256": "767e51eb1aae03b2018cc153f26c00091c5ff988c8d9fd0ae006ee801218c88b"
+      "sha256": "f61f8b1e0b34bf9ce8aea7a4c2dac404db684ebe200229d606d0cef5844ef824"
     },
     {
       "path": "validation-report.md",
@@ -201,8 +201,8 @@
     },
     {
       "path": "workbook-preview.png",
-      "bytes": 343011,
-      "sha256": "21aa370fe528013269347ca3d4300e9de5e0a98c47e0dbef78d4b7fb4ba66c61"
+      "bytes": 332787,
+      "sha256": "f971d0012ed33a8140696ce6c867049f91ae2dcf03ba1c056991d594cbb92acd"
     }
   ]
 }

@@ -18,8 +18,8 @@
     },
     {
       "path": "revenue-analysis.xlsx",
-      "bytes": 18101,
-      "sha256": "1dc95888e68a49ddf07ce75403b03812ef462ffacd0a61704620ee75353f7e46"
+      "bytes": 18113,
+      "sha256": "be339d3d84eb20eb7c9e0e3e2e73ec7681ba51194c72b4cff2d95b0597cfeaf6"
     },
     {
       "path": "reviewer-packet.pdf",
@@ -28,18 +28,18 @@
     },
     {
       "path": "social-cut.mp4",
-      "bytes": 278110,
-      "sha256": "981ac0628899f0d1f5cfc5a02c71e02052dc5df48fa3cc0e57019ff26ff15e05"
+      "bytes": 217199,
+      "sha256": "ccb03e374ed0ab6962f26608d4287d5ad18bf580550d2b3a8d5a8ac143020ff7"
     },
     {
       "path": "social-cut.webm",
-      "bytes": 406729,
-      "sha256": "f6933637ca85fcc8c0e5eed4c3520cdf6f7b3d1a034042adb89e8cf50864bc5a"
+      "bytes": 296720,
+      "sha256": "3aa8604ebcf4fde601c051aafb49ca568cf29bde5f193add7f8878df2260bd9b"
     },
     {
       "path": "workbook-preview.png",
-      "bytes": 343011,
-      "sha256": "21aa370fe528013269347ca3d4300e9de5e0a98c47e0dbef78d4b7fb4ba66c61"
+      "bytes": 332787,
+      "sha256": "f971d0012ed33a8140696ce6c867049f91ae2dcf03ba1c056991d594cbb92acd"
     }
   ]
 }

@@ -34,11 +34,11 @@
   "outputs": [
     {
       "path": "descriptive-revenue-bridge.xlsx",
-      "sha256": "91789d4527c905af96c20dbb061415cc889825a2fe51a1f933928cde5303986d"
+      "sha256": "cb1a4362061b68e9921b8c68bbfccd4261c1ac02db44c03a774637e87d16aa0e"
     },
     {
       "path": "descriptive-review.png",
-      "sha256": "b703bb70991388338d405d617832dc6cf77c7e004b6e48e1485f4edb37221adb"
+      "sha256": "c533b9d55c831b45336780209feea0a56d0c2282bd0c19051c637f68297dc4fa"
     },
     {
       "path": "descriptive-memo.md",

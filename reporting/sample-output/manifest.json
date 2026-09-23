@@ -22,11 +22,11 @@
   "outputs": [
     {
       "path": "revenue-model.xlsx",
-      "sha256": "2df65cd6928301020ea891c7441a8067456dd96496c07625349d21ac4ed3d775"
+      "sha256": "4ee899a70498cc05b1ea642f760417d55f8aebc6bef90a54a799bf498c04a5a8"
     },
     {
       "path": "forecast-review.png",
-      "sha256": "70c0e898a33a7bbbd7b8846b0a657d1feb2010671afb6c5902b8d3db4adcbc51"
+      "sha256": "393c5427a026889bb495d7376151a169c6efb2e6fde4271ba70c6f416bcba69b"
     },
     {
       "path": "decision-memo.md",
