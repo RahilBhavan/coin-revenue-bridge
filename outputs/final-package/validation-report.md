@@ -53,8 +53,9 @@ python3 scripts/validate_final_evidence.py
 python3 scripts/reconcile_overlap_tables.py
 → 16 repeated metric-period-definition groups reconciled with zero differences; exit 0
 
-Playwright-bundled ffmpeg + frame streaming scripts
-→ demo.webm is 180 seconds and social-cut.webm is 30 seconds; both VP8 1280×720
+scripts/encode_demo_videos.sh (ffmpeg + frame streaming scripts)
+→ demo.webm is 180 seconds and social-cut.webm is 30 seconds, both VP8 1280×720;
+  social-cut.mp4 is 30 seconds, H.264 1280×720 yuv420p
 ```
 
 The original runtime lacked a system FFmpeg and the Swift/SDK mismatch prevented native MP4 encoding, so the first verified deliverables were VP8 WebM files. On 2026-09-22, system FFmpeg 9.0.2 with `libx264` produced a 30-second, 1280×720, yuv420p H.264 MP4. `ffprobe` confirmed the codec, dimensions, pixel format, duration, and file size.

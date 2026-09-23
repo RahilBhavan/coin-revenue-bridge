@@ -4,7 +4,7 @@
 **Run:** play `demo.webm`, or open `demo.html` for an interactive version. The HTML auto-advances; Space pauses; arrow keys move between frames.  
 **Status:** **DESCRIPTIVE / NOT A FORECAST**
 
-The original build used a Playwright-bundled FFmpeg binary to encode the eight reviewed caption frames as a 180-second VP8 WebM after the native Swift encoder failed. A system FFmpeg with H.264 support later became available and produced a verified 30-second, 1280×720 H.264 MP4 social cut. The WebM and interactive HTML remain the full three-minute walkthrough. All media uses reviewed local inputs and has no network dependency.
+`scripts/encode_demo_videos.sh` uses ffmpeg to encode the eight reviewed caption frames as a 180-second VP8 WebM, plus a 30-second social cut as VP8 WebM and a 1280×720 H.264 MP4. The WebM and interactive HTML remain the full three-minute walkthrough. All media uses reviewed local inputs and has no network dependency.
 
 ## Storyboard and optional talk track
 
