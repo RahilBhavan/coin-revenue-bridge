@@ -117,11 +117,11 @@
         },
         {
           "path": "outputs/final-package/demo-script.md",
-          "sha256": "195df13d3a8ed6e7256c19a9fe5ee936f1ad225f14b2f57a8cccb159e655aebd"
+          "sha256": "4184e4c10669766e2b120540ae35685dc09d5385d3dfa8a82a8e3365cf76a44e"
         },
         {
           "path": "outputs/final-package/ai-contribution.md",
-          "sha256": "017d364365c88962ae3d086c96159a553ac4276535bb78f86070eef214158fd8"
+          "sha256": "d3e11a3afef8016db998c62777dd8f14cf57b6d005314ff3fc4b38f40a84da7d"
         },
         {
           "path": "outputs/final-package/validation-report.md",

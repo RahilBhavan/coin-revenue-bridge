@@ -18,6 +18,7 @@ This portfolio project was developed with substantial AI assistance. AI was used
 
 - It did not create access to Coinbase internal data, confirm management intent, or validate causal drivers.
 - It did not establish an investment view, a production forecast, or model superiority.
+- It did not verify current openings or hiring outcomes.
 - It did not bypass the earlier browser admin-policy restriction on Coinbase careers navigation.
 - It did not deploy, publish, transact, create accounts, contact anyone, or install project dependencies.
 

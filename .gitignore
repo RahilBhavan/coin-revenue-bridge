@@ -20,6 +20,10 @@ work/tmp/
 
 # Private career/networking research retained locally, not part of the case study
 02-research/prior-plans/
+outputs/twitter-rollout-plan.md
+outputs/x-rollout-alt-text.md
+outputs/x-rollout-measurement.csv
+work/x-rollout-research.md
 
 # Local environment and credentials
 .env

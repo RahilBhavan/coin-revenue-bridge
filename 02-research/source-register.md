@@ -10,9 +10,9 @@ Evidence cutoff for this planning pass: 2026-09-20. “Inspected” means the so
 | R-04 | [Q2 2024 shareholder letter, SEC](https://www.sec.gov/Archives/edgar/data/1679788/000167978824000148/q224shareholderletter.htm) | filed 2024-08; inspected 2026-09-20 | Consumer revenue/volume and non-volume revenue warning | Narrative does not quantify all mix components | Inspected |
 | R-05 | [Q3 2025 shareholder letter, SEC](https://www.sec.gov/Archives/edgar/data/1679788/000167978825000207/q325shareholderletter.htm) | filed 2025-10; inspected 2026-09-20 | Continued consumer revenue/volume series | Must verify definition consistency with earlier originals | Inspected |
 | R-06 | [Coinbase 2024 Form 10-K, SEC](https://www.sec.gov/Archives/edgar/data/1679788/000167978825000022/coin-20241231.htm) | filed 2025-02; inspected 2026-09-20 | Annual reconciliation and revenue notes | Annual totals do not replace quarterly vintage checks | Inspected |
-| R-07 | Supplied Strategic Finance posting extract in `prior-plans` | PDF printed 2026-09-15; copied 2026-09-20 | Historical duties and requirements | Current opening and full eligibility unverified | Preserved |
+| R-07 | Supplied Strategic Finance posting extract (private, not published) | PDF printed 2026-09-15; copied 2026-09-20 | Historical duties and requirements | Current opening and full eligibility unverified | Preserved |
 | R-08 | Prior Strategic Finance plan, deliverables, roadmap, delivery standard | updated 2026-09-16; copied 2026-09-20 | Scope, evidence standards, prior decisions | Planning evidence, not source data | Preserved |
-| R-09 | Prior role and alumni research in `prior-plans` | researched 2026-09-15; copied 2026-09-20 | Audience and review context | Employment/referral status may change; no outreach authorized | Preserved |
+| R-09 | Prior role research (private, not published) | researched 2026-09-15; copied 2026-09-20 | Audience and review context | Employment/referral status may change; no outreach authorized | Preserved |
 
 ## Sources required but not yet inspected quarter by quarter
 

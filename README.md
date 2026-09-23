@@ -71,7 +71,7 @@ See `02-research/feasibility-verdict.md` for the PIVOT decision and `outputs/des
 | Folder | Contents |
 |---|---|
 | `01-brief` | decision, scope, audience, risks, open choices |
-| `02-research` | feasibility review, source register, preserved prior plans |
+| `02-research` | feasibility review, source register |
 | `03-design` | three-design comparison, data model, formulas, architecture |
 | `04-deliverables` | artifact contract, demo storyboard, reviewer packet |
 | `05-validation` | validation matrix and adversarial review |
