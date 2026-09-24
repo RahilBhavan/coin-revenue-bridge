@@ -11,8 +11,8 @@
     },
     {
       "path": "ai-contribution.md",
-      "bytes": 2430,
-      "sha256": "2e87dd8b820f4c2e43bf087b9f86eeab21cca290c47f6406b8c85025210f73f3"
+      "bytes": 1044,
+      "sha256": "d372b4d7cc08a11833006bf407bd184183f5f3c3a83573e6233c706686464ab3"
     },
     {
       "path": "analysis.sql",
@@ -192,7 +192,7 @@
     {
       "path": "validation-evidence.json",
       "bytes": 4352,
-      "sha256": "dfea024d4767dc14d7769fceaf347490eccef7babf93ddac792a5fac0a1a2ebe"
+      "sha256": "6650d37e1bdb3a587d20be061728f89a02961d93a049f138dde2ae0f9ea21f73"
     },
     {
       "path": "validation-report.md",
