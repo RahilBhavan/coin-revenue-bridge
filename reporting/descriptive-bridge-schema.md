@@ -27,17 +27,9 @@ The fixed-order descriptive bridge is:
 The factor `1,000` converts USD billions to USD millions. This decomposition
 describes an algebraic change and does not establish causality.
 
-Build command once SEC-derived inputs are ready:
+The workbook is built with a separate spreadsheet tool that is not part of this repo; the committed workbook is the source of truth.
 
-```bash
-node scripts/build_descriptive_reporting.mjs \
-  --metrics path/to/processed_metrics.csv \
-  --bridge path/to/descriptive_bridge.csv \
-  --output-dir path/to/output \
-  --label "DESCRIPTIVE / NOT A FORECAST"
-```
-
-Use `--label "SAMPLE / NOT FOR SHARING"` only with synthetic fixture data.
+The `SAMPLE / NOT FOR SHARING` label is used only with synthetic fixture data.
 
 The generated workbook also reads the checked-in reviewed observation register
 and source register to populate the reporting-definition appendix and source

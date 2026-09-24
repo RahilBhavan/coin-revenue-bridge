@@ -3,6 +3,8 @@
 Requires Python 3.9+ and only the standard library. The fixture is synthetic and
 exists to verify behavior; it is not a Coinbase forecast or sourced result.
 
+The workbook is built with a separate spreadsheet tool that is not part of this repo; the committed workbook is the source of truth.
+
 Run the automated suite:
 
 ```sh

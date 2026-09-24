@@ -20,50 +20,20 @@ points for yield. Yield values therefore use `0.15` for 0.15%, not 15%.
 Required numeric fields may not be blank for eligible rows. `model_id` must be
 one of `prior_quarter`, `prior_year`, or `driver`.
 
-## Sample build
+## Workbook build
 
+The workbook is built with a separate spreadsheet tool that is not part of this repo; the committed workbook is the source of truth.
 The checked-in fixture data is synthetic and exists only to prove the reporting
-path. Run:
-
-```bash
-scripts/build_sample_reporting.sh
-```
-
-The command regenerates `reporting/sample-output/` deterministically and then
-runs workbook and package validation. No internet access or dependency install
-is required.
-
-For real processed outputs, call the builder directly:
-
-```bash
-node scripts/build_reporting.mjs \
-  --metrics path/to/processed_metrics.csv \
-  --forecasts path/to/forecast_results.csv \
-  --output-dir path/to/output \
-  --label DRAFT
-```
-
-`DRAFT` and `SAMPLE / NOT FOR SHARING` are the only accepted labels. This
-generator does not produce a share-ready artifact; the validation report and
-human review gates remain separate.
+path; `sample-output/` and `descriptive-sample-output/` hold committed fixture
+builds.
 
 ## Descriptive pivot
 
-The current feasibility verdict is `PIVOT—descriptive bridge`. The separate
-contract in `descriptive-bridge-schema.md` and builder
-`scripts/build_descriptive_reporting.mjs` produce a descriptive workbook,
-memo, reviewer packet, preview, and manifest without forecast language. The
-reader-facing workbook always displays `DESCRIPTIVE / NOT A FORECAST`; fixture
-builds also display `SAMPLE / NOT FOR SHARING`.
-
-Run the synthetic contract check with:
-
-```bash
-scripts/build_sample_descriptive_reporting.sh
-```
-
-Do not run the earlier forecast builder against SEC-derived data unless the
-project passes a future `GO—forecast` gate.
+The current feasibility verdict is `PIVOT—descriptive bridge`. The contract in
+`descriptive-bridge-schema.md` defines a descriptive workbook, memo, reviewer
+packet, preview, and manifest without forecast language. The reader-facing
+workbook always displays `DESCRIPTIVE / NOT A FORECAST`; fixture builds also
+display `SAMPLE / NOT FOR SHARING`.
 
 ## Workbook design
 

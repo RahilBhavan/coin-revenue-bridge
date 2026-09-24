@@ -65,12 +65,7 @@ python3 scripts/validate_final_evidence.py
 
 `validate_final_evidence.py` exits 1 if any check fails. Without the two prep steps it skips the checks that need their outputs and prints the command to run.
 
-Optional: rebuild and check the workbook. These two steps need Node.js 20 or later. The workbook rebuild step uses a non-public spreadsheet tool; from a fresh clone it is skipped and the committed workbook is the source of truth.
-
-```sh
-node scripts/build_descriptive_reporting.mjs --metrics work/real-reporting-inputs/processed_metrics.csv --bridge work/real-reporting-inputs/descriptive_bridge.csv --enhanced-dir work/enhanced-analysis --output-dir outputs/descriptive-bridge --label "DESCRIPTIVE / NOT A FORECAST"
-node scripts/validate_descriptive_reporting.mjs --output-dir outputs/descriptive-bridge
-```
+The workbook is built with a separate spreadsheet tool that is not part of this repo; the committed workbook is the source of truth.
 
 ## Sources
 
