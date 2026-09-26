@@ -2,9 +2,9 @@
 
 [![ci](https://github.com/RahilBhavan/coin-revenue-bridge/actions/workflows/ci.yml/badge.svg)](https://github.com/RahilBhavan/coin-revenue-bridge/actions/workflows/ci.yml)
 [![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-**Live case study: https://rahilbhavan.github.io/coin-revenue-bridge/**
+**Live case study: https://revenue.rahilbhavan.com/**
 
-[![Screenshot of the live case study: Q3 to Q4 2024 headline numbers, $863.8M revenue increase split into $852.9M volume and $10.9M yield effects](docs/screenshot.png)](https://rahilbhavan.github.io/coin-revenue-bridge/)
+[![Screenshot of the live case study: Q3 to Q4 2024 headline numbers, $863.8M revenue increase split into $852.9M volume and $10.9M yield effects](docs/screenshot.png)](https://revenue.rahilbhavan.com/)
 
 A source-backed bridge that splits Coinbase's Q3 to Q4 2024 consumer transaction revenue change into volume and effective-yield effects, built only from public SEC filings.
 
@@ -36,7 +36,7 @@ The design set a gate before looking at results: at least twelve comparable quar
 
 ## What's in it
 
-- [Live case study](https://rahilbhavan.github.io/coin-revenue-bridge/), also in [`dist/`](dist/index.html)
+- [Live case study](https://revenue.rahilbhavan.com/), also in [`dist/`](dist/index.html)
 - [Two-page decision memo (PDF)](outputs/final-package/decision-memo.pdf)
 - [Seven-sheet workbook (XLSX)](outputs/final-package/revenue-analysis.xlsx), formula-driven
 - [Reviewer packet (PDF)](outputs/final-package/reviewer-packet.pdf), the strongest objections and how to test them
