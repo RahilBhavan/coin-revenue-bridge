@@ -1,11 +1,13 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#fafafa">
 <title>COIN revenue bridge: Q3 to Q4 2024</title>
 <meta name="description" content="Independent bridge of Coinbase's Q3 to Q4 2024 consumer revenue change into volume and yield effects, built from SEC filings.">
 <link rel="canonical" href="https://rahilbhavan.github.io/coin-revenue-bridge/">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230f172a'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='%2338bdf8' text-anchor='middle'%3ERB%3C/text%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='13' fill='%23171717'/%3E%3Cpath d='M16 17h20c9 0 14 4 14 11 0 5-3 8-7 10 5 1 8 4 8 9 0 8-6 12-16 12H16V17zm10 9v9h9c4 0 6-2 6-5s-2-4-6-4h-9zm0 17v8h10c4 0 6-1 6-4s-2-4-6-4H26z' fill='white'/%3E%3C/svg%3E">
 <meta property="og:type" content="website">
 <meta property="og:title" content="COIN revenue bridge: Q3 to Q4 2024">
 <meta property="og:description" content="Independent bridge of Coinbase's Q3 to Q4 2024 consumer revenue change into volume and yield effects, built from SEC filings.">
@@ -13,14 +15,113 @@
 <meta property="og:image" content="https://rahilbhavan.github.io/coin-revenue-bridge/social-card.png">
 <meta name="twitter:card" content="summary_large_image">
 <style>
-:root{--navy:#10233f;--blue:#1652f0;--ink:#172b3a;--muted:#526575;--ice:#f4f8fc;--line:#cfd9e5;--green:#087a55;--amber:#9a6700}*{box-sizing:border-box}body{margin:0;font:16px/1.55 Arial,sans-serif;color:var(--ink);background:#fff}a{color:var(--blue)}.wrap{max-width:1080px;margin:auto;padding:0 28px}.bar{height:10px;background:var(--navy)}header{padding:76px 0 52px;background:linear-gradient(135deg,#f7faff,#eaf2ff)}.eyebrow{font-weight:700;color:var(--blue);letter-spacing:.08em;font-size:13px}.status{display:inline-block;margin-top:18px;padding:7px 10px;border:1px solid #e6b94a;background:#fff7d6;color:#7a5100;font-weight:700}h1{font-size:52px;line-height:1.04;max-width:850px;margin:14px 0 20px;color:var(--navy)}h2{font-size:32px;color:var(--navy);margin:0 0 18px}h3{color:var(--navy)}.lede{font-size:21px;max-width:780px;color:var(--muted)}section{padding:64px 0;border-top:1px solid var(--line)}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.card{padding:22px;border:1px solid var(--line);background:white}.metric{font-weight:700;font-size:31px;color:var(--navy)}.label{font-size:13px;color:var(--muted)}.two{display:grid;grid-template-columns:1.1fr .9fr;gap:42px;align-items:start}.callout{padding:22px;border-left:5px solid var(--green);background:#e7f8f2}.warning{padding:22px;border-left:5px solid var(--amber);background:#fff4d6}.bars{display:grid;gap:15px}.barrow{display:grid;grid-template-columns:150px 1fr 90px;gap:12px;align-items:center}.track{height:18px;background:#e9eef5}.fill{height:100%;background:var(--blue)}table{width:100%;border-collapse:collapse}th{background:var(--navy);color:#fff;text-align:left}th,td{padding:12px;border:1px solid var(--line)}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}.button{display:inline-block;padding:11px 16px;background:var(--blue);color:white;text-decoration:none;font-weight:700}.button.alt{background:white;color:var(--blue);border:1px solid var(--blue)}img{max-width:100%;border:1px solid var(--line)}footer{padding:40px 0;color:var(--muted);font-size:14px;background:var(--ice)}@media(max-width:760px){h1{font-size:37px}.grid{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr}.barrow{grid-template-columns:110px 1fr 70px}.wrap{padding:0 18px}table{display:block;max-width:100%;overflow-x:auto}}
-</style></head><body><div class="bar"></div>
-<header><div class="wrap"><div class="eyebrow">INDEPENDENT REVENUE ANALYSIS</div><h1>Coinbase consumer transaction revenue rose $863.8M from Q3 to Q4 2024</h1><p class="lede">$852.9M came from higher consumer trading volume and $10.9M from effective yield, bridging volume first. The symmetric Shapley split, which averages both factor orders, gives $856.4M to volume and $7.4M to yield.</p><div class="status">DESCRIPTIVE / NOT A FORECAST</div><div class="actions"><a class="button" href="decision-memo.pdf">Read the two-page memo</a><a class="button alt" href="revenue-analysis.xlsx">Inspect the workbook</a></div></div></header>
+:root{color-scheme:light;--ink:#171717;--body:#4d4d4d;--muted:#707070;--line:#e8e8e8;--canvas:#fafafa;--white:#fff;--blue:#0070f3;--sans:Inter,Arial,Helvetica,system-ui,sans-serif;--mono:"SFMono-Regular",Consolas,"Liberation Mono",monospace}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--canvas);color:var(--ink);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+a:focus-visible,summary:focus-visible{outline:2px solid var(--blue);outline-offset:4px}
+::selection{background:#171717;color:#f2f2f2}
+.container{width:min(100% - 48px,1160px);margin-inline:auto}
+.mono{font:12px/1.4 var(--mono);letter-spacing:.035em;text-transform:uppercase}
+.site-nav{height:68px;background:rgba(255,255,255,.94);border-bottom:1px solid var(--line);position:relative;z-index:5}
+.nav-inner{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:600;letter-spacing:-.04em;white-space:nowrap}
+.brand-mark{width:27px;height:27px;display:grid;place-items:center;background:var(--ink);color:#fff;border-radius:7px;font:600 15px/1 var(--sans);letter-spacing:-.09em;padding-right:2px}
+.nav-links{display:flex;align-items:center;gap:2px}
+.nav-links a{padding:10px 14px;border-radius:100px;color:var(--body);font-size:14px;text-decoration:none;transition:background-color .15s,color .15s}
+.nav-links a:hover{background:#f5f5f5;color:var(--ink)}
+.nav-cta{border:1px solid var(--line);background:#fff;color:var(--ink)!important;border-radius:6px!important;font-weight:500;white-space:nowrap}.nav-cta-short{display:none}
+.hero{position:relative;isolation:isolate;overflow:hidden;background:#fff;border-bottom:1px solid var(--line);padding:112px 0 100px}
+.hero:before{content:"";position:absolute;z-index:-1;width:min(1100px,110vw);height:420px;left:50%;top:8px;transform:translateX(-50%);background:radial-gradient(ellipse at 18% 53%,rgba(0,223,216,.23),transparent 34%),radial-gradient(ellipse at 41% 34%,rgba(0,124,240,.20),transparent 38%),radial-gradient(ellipse at 65% 42%,rgba(121,40,202,.17),transparent 36%),radial-gradient(ellipse at 82% 55%,rgba(255,0,128,.15),transparent 29%),radial-gradient(ellipse at 95% 73%,rgba(249,203,40,.20),transparent 26%);filter:blur(40px);pointer-events:none}
+.hero-inner{max-width:870px;margin:auto;text-align:center}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--body);font:12px/1.3 var(--mono);letter-spacing:.045em;text-transform:uppercase}
+.eyebrow:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--blue)}
+h1,h2,h3,p{margin-top:0}
+h1{font-size:clamp(42px,6vw,72px);line-height:1.04;letter-spacing:-.065em;font-weight:600;text-wrap:balance;margin:25px auto 25px}
+.hero-lede{font-size:18px;line-height:1.65;color:var(--body);max-width:720px;margin:0 auto;text-wrap:pretty}
+.hero-actions,.action-list{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:32px}
+.button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:100px;font-size:15px;line-height:1.2;font-weight:500;text-decoration:none;white-space:nowrap;transition:background-color .15s,box-shadow .15s,transform .15s}
+.button:hover{box-shadow:0 2px 9px #00000018}
+.button:active{transform:scale(.96)}
+.button.primary{background:var(--ink);color:#fff}
+.button.primary:hover{background:#333}
+.button.secondary{background:#fff;color:var(--ink);box-shadow:inset 0 0 0 1px #00000020}
+.button.secondary:hover{background:#f7f7f7}
+.hero-note{margin:28px 0 0;color:var(--muted);font:12px/1.6 var(--mono)}
+section{scroll-margin-top:24px}
+.section{padding:88px 0;border-bottom:1px solid var(--line)}
+.section-heading{max-width:690px;margin-bottom:38px}
+.section-heading .mono,.section-intro .mono{color:var(--muted)}
+h2{font-size:clamp(30px,3.8vw,44px);line-height:1.14;letter-spacing:-.045em;font-weight:600;text-wrap:balance;margin:13px 0 13px}
+h3{font-size:21px;line-height:1.3;letter-spacing:-.025em;font-weight:600;margin:0 0 9px}
+.section-heading p,.section-intro p{color:var(--body);font-size:16px;line-height:1.65;margin:0}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.metric-card{background:#fff;border-radius:8px;padding:26px;min-height:150px;box-shadow:inset 0 0 0 1px #00000014,0 1px 1px #00000005,0 2px 2px #0000000a;display:flex;flex-direction:column;justify-content:space-between}
+.metric-card strong{display:block;font-size:clamp(26px,3vw,39px);line-height:1.1;letter-spacing:-.055em;font-weight:600;font-variant-numeric:tabular-nums}
+.metric-card span{display:block;color:var(--body);font-size:13px;line-height:1.4}
+.metric-card:first-child{background:var(--ink);color:#fff;box-shadow:none}
+.metric-card:first-child span{color:#c8c8c8}
+.bridge-panel{background:#fff;border-radius:12px;box-shadow:inset 0 0 0 1px #00000014,0 2px 2px #0000000a,0 8px 16px -8px #0000000a;overflow:hidden}
+.bridge-head,.bridge-row{display:grid;grid-template-columns:minmax(190px,1.2fr) repeat(3,minmax(100px,1fr));gap:18px;align-items:center;padding:18px 24px}
+.bridge-head{background:#f5f5f5;color:var(--muted);font:12px/1.35 var(--mono);text-transform:uppercase}
+.bridge-row{border-top:1px solid var(--line);font-size:15px}
+.bridge-row strong{font-weight:500}
+.bridge-row span{font-variant-numeric:tabular-nums}
+.bridge-row.featured{background:#fafafa}
+.bridge-row.featured strong:before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--blue);vertical-align:2px;margin-right:9px}
+.fine-print{color:var(--muted);font-size:13px;line-height:1.6;margin:18px 0 0}.scroll-hint{display:none}
+.scenario-wrap{overflow-x:auto;background:#fff;border-radius:12px;box-shadow:inset 0 0 0 1px #00000014,0 1px 1px #00000005}
+table{border-collapse:collapse;width:100%;min-width:740px;text-align:left;font-size:14px}
+th,td{padding:19px 22px;vertical-align:top;border-bottom:1px solid var(--line)}
+th{font:12px/1.4 var(--mono);text-transform:uppercase;color:var(--muted);background:#f5f5f5;font-weight:400}
+tr:last-child td{border-bottom:0}
+td:first-child{font-weight:600;color:var(--ink)}
+td:nth-child(2),td:nth-child(3),td:nth-child(4){font-variant-numeric:tabular-nums;white-space:nowrap}
+td:last-child{color:var(--body)}
+.dark-band{background:var(--ink);color:#fff;border-bottom:0}
+.dark-band .section-heading .mono,.dark-band .section-heading p{color:#a7a7a7}
+.dark-band .section-heading{margin-bottom:46px}
+.method-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.method-grid>div{border-top:1px solid #464646;padding-top:24px}
+.method-grid p,.method-grid li{color:#c8c8c8;line-height:1.7}
+.method-grid ul{margin:0;padding-left:20px}
+.method-grid li+li{margin-top:8px}
+.method-grid .callout{border-left:2px solid #50e3c2;padding:1px 0 1px 18px;margin-top:25px;color:#fff}
+.workbook-grid{display:grid;grid-template-columns:.86fr 1.14fr;align-items:center;gap:70px}
+.workbook-grid p{color:var(--body);line-height:1.7}
+.preview-frame{margin:0;background:#fff;border-radius:12px;padding:12px;box-shadow:inset 0 0 0 1px #00000014,0 2px 2px #0000000a,0 8px 16px -4px #0000000a}
+.preview-frame img{display:block;width:100%;height:auto;border-radius:5px;outline:1px solid #0000001a}
+.preview-frame figcaption{font:12px/1.5 var(--mono);color:var(--muted);padding:14px 4px 2px}
+.resources{background:#fff}
+.resource-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:36px}
+.resource{display:flex;flex-direction:column;justify-content:space-between;min-height:170px;padding:25px;background:#fff;border-radius:8px;text-decoration:none;box-shadow:inset 0 0 0 1px #0000001a,0 1px 1px #00000005;transition:background-color .15s,box-shadow .15s}
+.resource:hover{background:#fafafa;box-shadow:inset 0 0 0 1px #00000036,0 2px 8px #0000000a}
+.resource .mono{color:var(--muted)}
+.resource strong{font-size:19px;font-weight:600;letter-spacing:-.025em}
+.resource strong:after{content:" ↗";font-weight:400;color:var(--muted)}
+footer{background:#fff;padding:36px 0;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+.footer-inner{display:flex;justify-content:space-between;gap:25px;align-items:start}
+.footer-inner p{margin:0;max-width:680px}
+.footer-inner a{color:var(--ink);white-space:nowrap;text-decoration:none}
+.footer-inner a:hover{text-decoration:underline}
+@media(max-width:900px){.metrics{grid-template-columns:repeat(2,1fr)}.workbook-grid{gap:35px}.resource-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:680px){.container{width:min(100% - 32px,1160px)}.site-nav{height:62px}.nav-links a:not(.nav-cta){display:none}.nav-cta{padding:9px 12px!important}.nav-cta-long{display:none}.nav-cta-short{display:inline}.scroll-hint{display:block;color:var(--muted);font:12px/1.5 var(--mono);margin:0 0 10px}.hero{padding:85px 0 73px}.hero:before{width:120vw;height:330px;top:0;filter:blur(33px)}h1{font-size:clamp(40px,11vw,56px);letter-spacing:-.058em}.hero-lede{font-size:16px}.hero-actions{align-items:stretch;flex-direction:column}.button{width:100%}.section{padding:65px 0}.metrics{gap:9px}.metric-card{padding:19px;min-height:135px}.metric-card strong{font-size:clamp(25px,6vw,34px)}.bridge-head,.bridge-row{grid-template-columns:1.2fr 1fr 1fr;gap:8px;padding:15px 13px;font-size:13px}.bridge-panel{overflow-x:auto}.bridge-head,.bridge-row{min-width:600px}.bridge-head{font-size:10px}.method-grid,.workbook-grid{grid-template-columns:1fr;gap:28px}.resource-grid{grid-template-columns:1fr}.resource{min-height:130px}.footer-inner{display:block}.footer-inner a{display:inline-block;margin-top:16px}}
+@media(max-width:390px){.brand{font-size:14px}.brand-mark{width:24px;height:24px;font-size:13px}.metrics{grid-template-columns:1fr 1fr}.metric-card{padding:16px}.metric-card strong{font-size:25px}.metric-card span{font-size:12px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button,.resource,.nav-links a{transition:none}}
+</style>
+</head>
+<body>
+<nav class="site-nav" aria-label="Primary"><div class="container nav-inner"><a class="brand" href="#top" aria-label="COIN revenue bridge, back to top"><span class="brand-mark" aria-hidden="true">B</span><span>COIN / revenue bridge</span></a><div class="nav-links"><a href="#analysis">Analysis</a><a href="#method">Method</a><a href="#evidence">Evidence</a><a class="nav-cta" href="decision-memo.pdf" aria-label="Read the memo"><span class="nav-cta-long">Read the memo</span><span class="nav-cta-short">Memo</span> ↗</a></div></div></nav>
+<header class="hero" id="top"><div class="container hero-inner"><span class="eyebrow">Independent analysis · Q3 → Q4 2024</span><h1>What drove a $863.8M revenue increase?</h1><p class="hero-lede">Coinbase consumer transaction revenue rose from $483.3M to $1,347.1M. In a volume-first bridge, $852.9M tracks higher consumer spot volume and $10.9M tracks effective yield.</p><div class="hero-actions"><a class="button primary" href="#analysis">Explore the bridge <span aria-hidden="true">&nbsp;↗</span></a><a class="button secondary" href="decision-memo.pdf">Read the two-page memo</a></div><p class="hero-note">DESCRIPTIVE / NOT A FORECAST · No causal claim</p></div></header>
 <main>
-<section><div class="wrap"><h2>Q3 to Q4 2024</h2><div class="grid"><div class="card"><div class="metric">$863.8M</div><div class="label">reported revenue increase</div></div><div class="card"><div class="metric">$852.9M</div><div class="label">fixed-order volume effect</div></div><div class="card"><div class="metric">$10.9M</div><div class="label">fixed-order yield effect</div></div><div class="card"><div class="metric">$0.0M</div><div class="label">rounded residual</div></div></div></div></section>
-<section><div class="wrap"><h2>Three valid bridge orders</h2><p>The interaction term moves depending on factor order. The symmetric Shapley method averages both valid orders instead of hiding the choice.</p><div class="bars"><div class="barrow"><strong>Volume first</strong><div class="track"><div class="fill" style="width:98.7%"></div></div><span>$852.9M</span></div><div class="barrow"><strong>Yield first</strong><div class="track"><div class="fill" style="width:99.5%"></div></div><span>$859.9M</span></div><div class="barrow"><strong>Symmetric</strong><div class="track"><div class="fill" style="width:99.1%"></div></div><span>$856.4M</span></div></div><p class="label">Bars show the volume component as a share of the $863.8M change. They do not show causal contribution.</p></div></section>
-<section><div class="wrap"><h2>Illustrative planning sensitivities</h2><table><thead><tr><th>Case</th><th>Volume change</th><th>Yield change</th><th>Implied revenue</th><th>Management prompt</th></tr></thead><tbody><tr><td>Downside</td><td>-20%</td><td>-10 bps</td><td>$1,002.5M</td><td>Investigate activity retention and mix.</td></tr><tr><td>Reference</td><td>0%</td><td>0 bps</td><td>$1,347.1M</td><td>Q4 2024 actual reference; not a forecast.</td></tr><tr><td>Upside</td><td>+20%</td><td>+10 bps</td><td>$1,729.3M</td><td>Test operating readiness and mix sustainability.</td></tr></tbody></table><p class="label">These cases are editable mechanical sensitivities. They are not Coinbase guidance, probabilities, or expected outcomes.</p></div></section>
-<section><div class="wrap two"><div><h2>Definition control</h2><p>The later Q2 2026 deck restated Q2-Q4 2025 consumer spot volumes below earlier disclosures by $1.5B, $1.6B, and $2.3B. The project preserves both vintages and keeps those periods outside the earlier panel.</p><div class="callout"><strong>Why it matters:</strong> a longer series is not automatically a more comparable series.</div></div><div><h2>Reproducible by design</h2><ul><li>13 frozen SEC sources with SHA-256 hashes</li><li>Formula-driven seven-sheet workbook</li><li>One-command SQL reproduction</li><li>Automated definition, cutoff, duplicate, and bridge checks</li><li>Public AI contribution disclosure</li></ul></div></div></section>
-<section><div class="wrap two"><div><h2>Methods note: no forecast</h2><p>Before looking at results I set a gate of twelve comparable quarters: eight to train and four chronological holdouts. The comparable public panel has nine, bounded by a Q1 2024 revenue reclassification and later Trading Volume definition changes. So this page publishes the bridge and planning sensitivities and makes no forecast-accuracy claim.</p></div><img src="workbook-preview.png" alt="Workbook summary showing the nine-quarter revenue trend and Q3 to Q4 2024 bridge"></div></section>
-<section><div class="wrap"><h2>Review the evidence</h2><p>The package is designed to be challenged. Start with the memo, inspect formulas in the workbook, then use the reviewer packet to test the strongest objections.</p><div class="actions"><a class="button" href="decision-memo.pdf">Decision memo</a><a class="button alt" href="revenue-analysis.xlsx">Workbook</a><a class="button alt" href="reviewer-packet.pdf">Reviewer packet</a><a class="button alt" href="social-cut.mp4">30-second social cut</a><a class="button alt" href="practitioner-review.md">Review protocol</a></div></div></section>
-</main><footer><div class="wrap">Independent analysis of Coinbase public filings | Rahil Bhavan. No Coinbase endorsement, investment recommendation, causal finding, or forecast-performance claim.</div></footer></body></html>
+<section class="section" id="analysis"><div class="container"><div class="section-heading"><span class="mono">01 / The reported move</span><h2>Nearly all of the change follows volume.</h2><p>Consumer spot volume increased from $34B to $94B. The fixed-order bridge below reconciles to the reported revenue change.</p></div><div class="metrics"><div class="metric-card"><strong>$863.8M</strong><span>Reported revenue increase</span></div><div class="metric-card"><strong>$852.9M</strong><span>Volume effect, volume first</span></div><div class="metric-card"><strong>$10.9M</strong><span>Effective-yield effect, volume first</span></div><div class="metric-card"><strong>$0.0M</strong><span>Rounded reconciliation residual</span></div></div></div></section>
+<section class="section" id="bridge-orders"><div class="container"><div class="section-heading"><span class="mono">02 / Method choice</span><h2>Three ways to allocate the same change.</h2><p>The interaction term moves with factor order. The symmetric Shapley method averages the two orders; every method totals $863.8M.</p></div><p class="scroll-hint">Swipe to view the full table →</p><div class="bridge-panel" role="table" aria-label="Revenue bridge by factor order"><div class="bridge-head" role="row"><span role="columnheader">Method</span><span role="columnheader">Volume effect</span><span role="columnheader">Yield effect</span><span role="columnheader">Total change</span></div><div class="bridge-row" role="row"><strong role="cell">Volume first</strong><span role="cell">$852.9M</span><span role="cell">$10.9M</span><span role="cell">$863.8M</span></div><div class="bridge-row" role="row"><strong role="cell">Yield first</strong><span role="cell">$859.9M</span><span role="cell">$3.9M</span><span role="cell">$863.8M</span></div><div class="bridge-row featured" role="row"><strong role="cell">Symmetric Shapley</strong><span role="cell">$856.4M</span><span role="cell">$7.4M</span><span role="cell">$863.8M</span></div></div><p class="fine-print">Effective yield is consumer revenue divided by consumer spot volume. It is a proxy, not Coinbase’s fee rate. These are accounting decompositions, not causal contributions.</p></div></section>
+<section class="section" id="scenarios"><div class="container"><div class="section-heading"><span class="mono">03 / Illustrative planning sensitivities</span><h2>Stress the Q4 2024 reference.</h2><p>Change volume and effective yield around the reported Q4 result to frame operating questions. The workbook contains editable inputs.</p></div><p class="scroll-hint">Swipe to view the full table →</p><div class="scenario-wrap"><table><thead><tr><th scope="col">Case</th><th scope="col">Volume change</th><th scope="col">Yield change</th><th scope="col">Implied revenue</th><th scope="col">Management prompt</th></tr></thead><tbody><tr><td>Downside</td><td>−20%</td><td>−10 bps</td><td>$1,002.5M</td><td>Investigate activity retention and mix.</td></tr><tr><td>Reference</td><td>0%</td><td>0 bps</td><td>$1,347.1M</td><td>Q4 2024 actual reference; no forecast.</td></tr><tr><td>Upside</td><td>+20%</td><td>+10 bps</td><td>$1,729.3M</td><td>Test operating readiness and mix sustainability.</td></tr></tbody></table></div><p class="fine-print">Mechanical sensitivities only. These are not Coinbase guidance, probabilities, or expected outcomes.</p></div></section>
+<section class="section dark-band" id="method"><div class="container"><div class="section-heading"><span class="mono">04 / Evidence discipline</span><h2>Comparability determines what the model can say.</h2><p>A longer time series is useful only when its definitions are consistent.</p></div><div class="method-grid"><div><h3>Definition control</h3><p>The later Q2 2026 deck restated Q2–Q4 2025 consumer spot volumes below earlier disclosures by $1.5B, $1.6B, and $2.3B. Both vintages are preserved; those periods stay outside the earlier panel.</p><p class="callout">The source register retains 13 frozen SEC documents with SHA-256 hashes.</p></div><div><h3>Why there is no forecast</h3><p>A preset gate required twelve comparable quarters: eight to train and four chronological holdouts. Public filings support nine under one definition, bounded by the Q1 2024 revenue reclassification and later trading-volume changes.</p><p>This release publishes the bridge and sensitivities without a forecast-accuracy claim.</p></div></div></div></section>
+<section class="section" id="workbook"><div class="container workbook-grid"><div class="section-intro"><span class="mono">05 / Reproduce the result</span><h2>Built to be checked.</h2><p>The seven-sheet workbook exposes formulas and source references. The companion package includes the reviewer packet, reproducible SQL, automated definition and cutoff checks, and a public AI contribution disclosure.</p><div class="action-list" style="justify-content:flex-start"><a class="button primary" href="revenue-analysis.xlsx">Inspect the workbook <span aria-hidden="true">&nbsp;↗</span></a></div></div><figure class="preview-frame"><img src="workbook-preview.png" width="1600" height="900" loading="lazy" alt="Workbook summary showing the nine-quarter revenue trend and Q3 to Q4 2024 bridge"><figcaption>Formula-driven workbook / seven sheets</figcaption></figure></div></section>
+<section class="section resources" id="evidence"><div class="container"><div class="section-heading"><span class="mono">06 / Review the evidence</span><h2>Follow the numbers to the source.</h2><p>Start with the decision memo, inspect formulas, then use the reviewer packet to test the strongest objections.</p></div><div class="resource-grid"><a class="resource" href="decision-memo.pdf"><span class="mono">PDF / Executive summary</span><strong>Decision memo</strong></a><a class="resource" href="revenue-analysis.xlsx"><span class="mono">XLSX / Seven sheets</span><strong>Revenue workbook</strong></a><a class="resource" href="reviewer-packet.pdf"><span class="mono">PDF / Challenge guide</span><strong>Reviewer packet</strong></a><a class="resource" href="social-cut.mp4"><span class="mono">MP4 / 30 seconds</span><strong>Watch the summary</strong></a><a class="resource" href="practitioner-review.md"><span class="mono">MD / Human review</span><strong>Review protocol</strong></a><a class="resource" href="https://github.com/RahilBhavan/coin-revenue-bridge"><span class="mono">Repository / Sources and code</span><strong>Source repository</strong></a></div></div></section>
+</main>
+<footer><div class="container footer-inner"><p>Independent analysis of Coinbase public filings by Rahil Bhavan. No Coinbase endorsement, investment recommendation, causal finding, or forecast-performance claim.</p><a href="#top">Back to top ↑</a></div></footer>
+</body>
+</html>
