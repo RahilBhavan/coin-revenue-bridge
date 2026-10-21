@@ -2,13 +2,14 @@
 
 [![ci](https://github.com/RahilBhavan/coin-revenue-bridge/actions/workflows/ci.yml/badge.svg)](https://github.com/RahilBhavan/coin-revenue-bridge/actions/workflows/ci.yml)
 [![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-**Live case study: https://revenue.rahilbhavan.com/**
+
+**Live:** https://revenue.rahilbhavan.com/
 
 [![Screenshot of the live case study: Q3 to Q4 2024 headline numbers, $863.8M revenue increase split into $852.9M volume and $10.9M yield effects](docs/screenshot.png)](https://revenue.rahilbhavan.com/)
 
-A source-backed bridge that splits Coinbase's Q3 to Q4 2024 consumer transaction revenue change into volume and effective-yield effects, built only from public SEC filings.
+A source-backed bridge that splits Coinbase's Q3 to Q4 2024 consumer transaction revenue change into volume and effective-yield effects. It uses only public SEC filings, frozen and hashed in this repository. It produces a decision memo, a seven-sheet workbook, a reviewer packet and a static case study site.
 
-## The answer
+## Results
 
 Consumer transaction revenue rose **$863.8M**, from $483.3M in Q3 2024 to $1,347.1M in Q4 2024, while consumer spot volume rose from $34B to $94B. Volume drove almost all of it. The split depends on factor order, so the analysis shows all three valid views:
 
@@ -18,9 +19,9 @@ Consumer transaction revenue rose **$863.8M**, from $483.3M in Q3 2024 to $1,347
 | Yield first | $859.9M | $3.9M | $863.8M |
 | Symmetric Shapley | $856.4M | $7.4M | $863.8M |
 
-Each view reconciles to the reported change with a $0.0M rounded residual. Effective yield is consumer revenue divided by consumer spot volume. It is a proxy, not Coinbase's fee rate.
+Source: `outputs/final-package/bridge-attribution.csv`. Each view reconciles to the reported change with a $0.0M rounded residual. Effective yield is consumer revenue divided by consumer spot volume. It is a proxy, not Coinbase's fee rate.
 
-Planning sensitivities around the Q4 2024 actuals:
+Planning sensitivities around the Q4 2024 actuals, from `outputs/final-package/planning-scenarios.csv`:
 
 | Case | Volume change | Yield change | Implied revenue |
 |---|---:|---:|---:|
@@ -30,11 +31,9 @@ Planning sensitivities around the Q4 2024 actuals:
 
 These are mechanical sensitivities, not guidance, probabilities, or forecasts.
 
-## Why there is no forecast
+**Why there is no forecast.** The design set a gate before looking at results: at least twelve comparable quarters (eight to train, four to test). The public filings support nine under one definition. Coinbase reclassified consumer revenue in Q1 2024 and later redefined trading volume, so a longer series would mix incompatible numbers. The project reports the bridge and publishes no forecast. The [validation report](outputs/final-package/validation-report.md) lists the forecast checks as `NOT RUN`.
 
-The design set a gate before looking at results: at least twelve comparable quarters (eight to train, four to test). The public filings support nine under one definition. Coinbase reclassified consumer revenue in Q1 2024 and later redefined trading volume, so a longer series would mix incompatible numbers. The project reports the bridge and publishes no forecast.
-
-## What's in it
+The deliverables:
 
 - [Live case study](https://revenue.rahilbhavan.com/), also in [`dist/`](dist/index.html)
 - [Two-page decision memo (PDF)](outputs/final-package/decision-memo.pdf)
@@ -43,17 +42,17 @@ The design set a gate before looking at results: at least twelve comparable quar
 - [Executive package (ZIP)](outputs/coin-revenue-bridge-executive-package.zip): memo, workbook, reviewer packet, review protocol
 - [Validation report](outputs/final-package/validation-report.md) and [machine-readable evidence](outputs/final-package/validation-evidence.json)
 
-## How it's built
+## How it works
 
-- `data/raw/`: 13 frozen source documents, each with a SHA-256 hash in `artifacts/source-register.csv`.
-- `data/processed/`: reviewed metric observations, one row per metric, quarter, and publication vintage. Original and recast values stay as separate rows.
-- `src/strategic_finance/` and `sql/`: a Python and SQLite core that enforces information cutoffs and definition families and computes the bridges with decimal arithmetic.
-- `scripts/`: builders for the workbook, PDFs, and site, plus the evidence validator.
-- `outputs/final-package/`: the reviewer package, with a standalone `reproduce.py` that recomputes the bridge from package-local files.
+- `data/raw/` holds the frozen source documents. `artifacts/source-register.csv` records a SHA-256 hash for each of the 13 registered documents.
+- `data/processed/` holds reviewed metric observations, one row per metric, quarter, and publication vintage. Original and recast values stay as separate rows.
+- `src/strategic_finance/` and `sql/` are a Python and SQLite core. It enforces information cutoffs and definition families, and it computes the bridges with decimal arithmetic.
+- `scripts/` builds the workbook, PDFs, and site, and holds the evidence validator.
+- `outputs/final-package/` is the reviewer package. Its standalone `reproduce.py` recomputes the bridge from package-local files.
 
 ## Run it
 
-Python 3.9 or later, standard library only:
+Python 3.9 or later, standard library only. CI runs Python 3.11.
 
 ```sh
 python3 -m unittest discover -s tests
@@ -63,9 +62,35 @@ python3 scripts/build_enhanced_analysis.py
 python3 scripts/validate_final_evidence.py
 ```
 
-`validate_final_evidence.py` exits 1 if any check fails. Without the two prep steps it skips the checks that need their outputs and prints the command to run.
+The test suite runs 13 tests. `reproduce.py` prints `PASS: bridge reconciles within $0.1M`. After the two prep steps, `validate_final_evidence.py` reports 15 checks as `PASS`. It exits 1 if any check fails. Without the prep steps it skips the checks that need their outputs and prints the command to run.
 
-The workbook is built with a separate spreadsheet tool that is not part of this repo; the committed workbook is the source of truth.
+The workbook is built with a separate spreadsheet tool that is not part of this repo. The committed workbook is the source of truth.
+
+## Repository layout
+
+- `01-brief/` to `06-execution/`: planning documents, from the brief to the first build
+- `artifacts/`: source register and artifact manifest
+- `data/`: raw SEC documents and processed metric observations
+- `dist/`: the static site that Vercel serves
+- `docs/`: README screenshot and social card
+- `outputs/`: final reviewer package, executive package, descriptive bridge, and public case study
+- `reporting/`: reporting pipeline, fixtures, and sample outputs
+- `scripts/`: builders, reproduction scripts, and the evidence validator
+- `sql/`: SQLite schema and bridge queries
+- `src/strategic_finance/`: the analytical core
+- `templates/`: memo and reviewer packet templates
+- `tests/`: unit tests and their fixture
+
+## Documentation
+
+`docs/` holds only images and the social card source. The project documents live in the numbered folders:
+
+- [Project brief](01-brief/project-brief.md): the decision, the audience, and the scope. [Open decisions](01-brief/open-decisions.md): unresolved gaps and fallbacks.
+- [Data feasibility](02-research/data-feasibility.md), [feasibility verdict](02-research/feasibility-verdict.md), and [source register](02-research/source-register.md): which filings support the analysis and why the forecast gate failed.
+- [Design options](03-design/design-options.md) and [architecture](03-design/architecture.md): the three designs compared and the data model.
+- [Deliverables](04-deliverables/deliverables.md), [validation plan](05-validation/validation-plan.md), and [adversarial review](05-validation/adversarial-review.md): acceptance criteria and the strongest objections.
+- [First build](06-execution/first-build.md): the build milestones.
+- [Artifact manifest](artifacts/manifest.md), [decision log](decisions.tsv), [release readiness](RELEASE-READINESS.md), and [AI contribution record](outputs/final-package/ai-contribution.md): what was built, decided, checked, and assisted.
 
 ## Sources
 
@@ -78,17 +103,8 @@ The workbook is built with a separate spreadsheet tool that is not part of this 
 - Consumer spot volume excludes derivatives, and some consumer revenue does not tie to spot volume, so effective yield is a proxy.
 - No external practitioner has reviewed the work yet. The [review protocol](outputs/public-case-study/practitioner-review.md) states this.
 
-## Project documents
+## License
 
-- [Project brief](01-brief/project-brief.md) and [open decisions](01-brief/open-decisions.md)
-- [Data feasibility](02-research/data-feasibility.md), [feasibility verdict](02-research/feasibility-verdict.md), [source register](02-research/source-register.md)
-- [Design options](03-design/design-options.md) and [architecture](03-design/architecture.md)
-- [Deliverables](04-deliverables/deliverables.md), [validation plan](05-validation/validation-plan.md), [adversarial review](05-validation/adversarial-review.md)
-- [Artifact manifest](artifacts/manifest.md), [decision log](decisions.tsv), [release readiness](RELEASE-READINESS.md), [AI contribution record](outputs/final-package/ai-contribution.md)
+MIT. See [LICENSE](LICENSE).
 
-## Related projects
-
-- [spine](https://github.com/RahilBhavan/spine): live stress test of Coinbase's Morpho loan book on Base
-- [mara-credit-case](https://github.com/RahilBhavan/mara-credit-case): credit committee case on a $5M secured revolver to MARA Holdings
-- [x402-exception-desk](https://github.com/RahilBhavan/x402-exception-desk): synthetic x402 payment exception desk
-- [Crypto finance hub](https://rahilbhavan.com/crypto-finance): all related work in one place
+Part of [Rahil Bhavan's projects](https://github.com/RahilBhavan).
