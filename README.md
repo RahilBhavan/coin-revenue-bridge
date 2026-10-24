@@ -52,7 +52,7 @@ The deliverables:
 
 ## Run it
 
-Python 3.9 or later, standard library only. CI runs Python 3.11.
+Python 3.9 or later, standard library only. CI runs Python 3.11. The tests and `reproduce.py` also passed locally on 3.9 and 3.14 (2026-10-24).
 
 ```sh
 python3 -m unittest discover -s tests
