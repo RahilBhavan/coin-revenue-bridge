@@ -17,6 +17,9 @@ sys.path.insert(0, str(ROOT / "src"))
 
 from strategic_finance.core import AnalysisError, ingest_csv  # noqa: E402
 
+sys.path.insert(0, str(ROOT / "scripts"))
+from forecast_gate import gate_report  # noqa: E402
+
 
 def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
@@ -135,6 +138,28 @@ def main(root: Path = ROOT) -> int:
         checks.extend({"id": check_id, "status": "SKIP", "missing": missing, "run_first": prep_steps(missing)} for check_id in PREP_CHECKS)
     else:
         checks.extend(prep_checks(root))
+
+    gate = gate_report(root)
+    forecast_files = sorted(
+        str(path.relative_to(root))
+        for folder in (out, root / "dist", root / "outputs" / "public-case-study")
+        if folder.exists()
+        for path in folder.iterdir()
+        if path.is_file() and "forecast" in path.name.lower() and path.name != "forecast-gate.csv"
+    )
+    gate_ok = gate["gate_open"] or not forecast_files
+    checks.append({"id": "forecast_gate", "status": "PASS" if gate_ok else "FAIL", "comparable_quarters": gate["comparable_quarters"], "required_quarters": gate["required_quarters"], "gate_open": gate["gate_open"], "by_family": gate["by_family"], "forecast_files_published": forecast_files})
+
+    latest_path = out / "latest-bridge.csv"
+    if latest_path.exists():
+        with latest_path.open(newline="", encoding="utf-8") as handle:
+            latest = list(csv.DictReader(handle))
+        residuals = [abs(Decimal(row["residual_mm"])) for row in latest]
+        sums = [abs(Decimal(row["revenue_change_mm"]) - Decimal(row["volume_effect_mm"]) - Decimal(row["yield_effect_mm"])) for row in latest]
+        ok = len(latest) == 3 and max(residuals) <= Decimal("0.1") and max(sums) <= Decimal("0.01")
+        checks.append({"id": "latest_bridge", "status": "PASS" if ok else "FAIL", "from_period": latest[0]["from_period"], "to_period": latest[0]["to_period"], "revenue_change_mm": latest[0]["revenue_change_mm"], "methods": [row["method"] for row in latest]})
+    else:
+        checks.append({"id": "latest_bridge", "status": "FAIL", "missing": "outputs/final-package/latest-bridge.csv"})
 
     demo = (out / "demo.html").read_text(encoding="utf-8") if (out / "demo.html").exists() else ""
     required_demo_claims = ["DESCRIPTIVE / NOT A FORECAST", "not an extrapolation", "does not prove management causality", "definition break"]

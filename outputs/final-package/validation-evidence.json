@@ -4,20 +4,20 @@
     {
       "id": "source_hashes",
       "status": "PASS",
-      "count": 13,
+      "count": 17,
       "mismatches": []
     },
     {
       "id": "source_resolution",
       "status": "PASS",
-      "observation_count": 20,
+      "observation_count": 30,
       "unresolved": []
     },
     {
       "id": "duplicate_keys",
       "status": "PASS",
-      "unique": 20,
-      "rows": 20
+      "unique": 30,
+      "rows": 30
     },
     {
       "id": "duplicate_import_rejection",
@@ -79,6 +79,30 @@
       "missing": []
     },
     {
+      "id": "forecast_gate",
+      "status": "PASS",
+      "comparable_quarters": 9,
+      "required_quarters": 12,
+      "gate_open": false,
+      "by_family": {
+        "PAIR-REV-POST2024Q1-VOL-CRYPTO-SPOT-EX-STABLE-Q2-2026": 5,
+        "PAIR-REV-POST2024Q1-VOL-SPOT-PRE2025Q4": 9
+      },
+      "forecast_files_published": []
+    },
+    {
+      "id": "latest_bridge",
+      "status": "PASS",
+      "from_period": "2026-03-31",
+      "to_period": "2026-06-30",
+      "revenue_change_mm": "-115.229",
+      "methods": [
+        "Volume first",
+        "Yield first",
+        "Symmetric Shapley"
+      ]
+    },
+    {
       "id": "demo_claim_audit",
       "status": "PASS",
       "missing": []
@@ -133,7 +157,7 @@
         },
         {
           "path": "outputs/final-package/validation-report.md",
-          "sha256": "59a5db2040e3ff29ce00bb81a6c5977f10d814b0afca491e9e261d1301e0fce5"
+          "sha256": "cff451c06d536e59b60b5dbaf34ac721bb1e24764a98fea894966dc2b5785587"
         },
         {
           "path": "outputs/final-package/overlap-reconciliation.csv",

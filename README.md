@@ -31,7 +31,17 @@ Planning sensitivities around the Q4 2024 actuals, from `outputs/final-package/p
 
 These are mechanical sensitivities, not guidance, probabilities, or forecasts.
 
-**Why there is no forecast.** The design set a gate before looking at results: at least twelve comparable quarters (eight to train, four to test). The public filings support nine under one definition. Coinbase reclassified consumer revenue in Q1 2024 and later redefined trading volume, so a longer series would mix incompatible numbers. The project reports the bridge and publishes no forecast. The [validation report](outputs/final-package/validation-report.md) lists the forecast checks as `NOT RUN`.
+Latest quarter (added 2026-10-25), from `outputs/final-package/latest-bridge.csv`. Consumer transaction revenue fell from $566.9M in Q1 2026 to $451.7M in Q2 2026 while consumer crypto spot volume fell from $33.8B to $25.8B:
+
+| Bridge method | Volume effect | Effective-yield effect | Total |
+|---|---:|---:|---:|
+| Volume first | -$134.2M | +$18.9M | -$115.2M |
+| Yield first | -$140.1M | +$24.8M | -$115.2M |
+| Symmetric Shapley | -$137.1M | +$21.9M | -$115.2M |
+
+This bridge uses Coinbase's newest volume definition (Q2 2026 deck: excludes stablecoin trading volume, routed trades count at half). Its yield is not comparable with the 2024 bridge. The memo, reviewer packet and workbook still cover only the Q3 to Q4 2024 bridge.
+
+**Why there is no forecast.** The design set a gate before looking at results: at least twelve comparable quarters (eight to train, four to test). `python3 scripts/forecast_gate.py` reports the count from the data: **9 of 12**. The nine quarters are Q3 2023 to Q3 2025. Twelve calendar quarters now have data through Q2 2026, but Coinbase redefined trading volume in Q4 2025 and again in Q2 2026, and its Q2 2026 10-Q says Trading Volume is no longer a key metric. Only five quarters (Q2 2025 to Q2 2026) exist under the newest definition, so the quarters cannot be added together. The project reports the bridges and publishes no forecast. The [validation report](outputs/final-package/validation-report.md) lists the forecast checks as `NOT RUN`.
 
 The deliverables:
 
@@ -44,7 +54,7 @@ The deliverables:
 
 ## How it works
 
-- `data/raw/` holds the frozen source documents. `artifacts/source-register.csv` records a SHA-256 hash for each of the 13 registered documents.
+- `data/raw/` holds the frozen source documents. `artifacts/source-register.csv` records a SHA-256 hash for each of the 17 registered documents.
 - `data/processed/` holds reviewed metric observations, one row per metric, quarter, and publication vintage. Original and recast values stay as separate rows.
 - `src/strategic_finance/` and `sql/` are a Python and SQLite core. It enforces information cutoffs and definition families, and it computes the bridges with decimal arithmetic.
 - `scripts/` builds the workbook, PDFs, and site, and holds the evidence validator.
@@ -57,12 +67,14 @@ Python 3.9 or later, standard library only. CI runs Python 3.11. The tests and `
 ```sh
 python3 -m unittest discover -s tests
 python3 outputs/final-package/reproduce.py
+python3 scripts/forecast_gate.py
+python3 scripts/build_latest_bridge.py
 python3 scripts/prepare_descriptive_reporting.py --input data/processed/analytics-ready-metric-observations.csv --output-dir work/real-reporting-inputs --from-period 2024-09-30 --to-period 2024-12-31
 python3 scripts/build_enhanced_analysis.py
 python3 scripts/validate_final_evidence.py
 ```
 
-The test suite runs 13 tests. `reproduce.py` prints `PASS: bridge reconciles within $0.1M`. After the two prep steps, `validate_final_evidence.py` reports 15 checks as `PASS`. It exits 1 if any check fails. Without the prep steps it skips the checks that need their outputs and prints the command to run.
+The test suite runs 18 tests. `reproduce.py` prints `PASS: bridge reconciles within $0.1M`. After the two prep steps, `validate_final_evidence.py` reports 17 checks as `PASS`. It exits 1 if any check fails. Without the prep steps it skips the checks that need their outputs and prints the command to run.
 
 The workbook is built with a separate spreadsheet tool that is not part of this repo. The committed workbook is the source of truth.
 
@@ -94,7 +106,7 @@ The workbook is built with a separate spreadsheet tool that is not part of this 
 
 ## Sources
 
-`data/raw/` holds 13 public documents: ten Coinbase shareholder letters (Q3 2023 to Q4 2025) filed as SEC 8-K exhibits, the 2025 Form 10-K, the Q2 2026 earnings deck, and the SEC submissions index for Coinbase Global, Inc. It also keeps the EDGAR filing index page for nine of the letters. All come from SEC EDGAR, and `artifacts/source-register.csv` lists the URL, accession number, and hash for each registered document. They are Coinbase's documents, reproduced here for verification. The MIT license covers this project's code and analysis, not these third-party filings.
+`data/raw/` holds 17 public documents: ten Coinbase shareholder letters (Q3 2023 to Q4 2025) filed as SEC 8-K exhibits, the Q1 and Q2 2026 earnings decks (8-K exhibits), the 2025 Form 10-K, the Q1 and Q2 2026 Forms 10-Q, and two SEC submissions indexes for Coinbase Global, Inc. (2026-09-20 and 2026-10-25). It also keeps the EDGAR filing index page for nine of the letters and the four 2026 filings. All come from SEC EDGAR, and `artifacts/source-register.csv` lists the URL, accession number, and hash for each registered document. They are Coinbase's documents, reproduced here for verification. The MIT license covers this project's code and analysis, not these third-party filings.
 
 ## Scope and limits
 

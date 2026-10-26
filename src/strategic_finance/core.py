@@ -12,6 +12,8 @@ from typing import Iterable, Sequence, Tuple
 
 REVENUE = "consumer_transaction_revenue"
 VOLUME = "consumer_trading_volume"
+# Pre-set before any result was seen: eight training quarters plus four chronological holdouts.
+FORECAST_GATE_QUARTERS = 12
 REQUIRED_COLUMNS = {
     "observation_id",
     "metric_name",
@@ -253,6 +255,42 @@ def _prior_quarter(period: str) -> str:
     return date(*previous).isoformat()
 
 
+def comparable_quarter_count(connection: sqlite3.Connection, definition_family: str) -> int:
+    """Longest run of consecutive quarters with both metrics under one definition family.
+
+    Original and recast vintages of the same quarter count once. Quarters under a
+    different definition family are never added, however recent they are.
+    """
+    revenue_family, volume_family = _component_families(definition_family)
+    rows = connection.execute(
+        "SELECT metric_name, period_end FROM reported_metric_observation "
+        "WHERE (definition_family = ? AND metric_name = ?) "
+        "OR (definition_family = ? AND metric_name = ?)",
+        (revenue_family, REVENUE, volume_family, VOLUME),
+    ).fetchall()
+    revenue = {period for metric, period in rows if metric == REVENUE}
+    volume = {period for metric, period in rows if metric == VOLUME}
+    both = revenue & volume
+    longest = run = 0
+    for period in sorted(both):
+        run = run + 1 if _prior_quarter(period) in both else 1
+        longest = max(longest, run)
+    return longest
+
+
+def forecast_gate(counts: dict) -> dict:
+    """Report the pre-set gate from per-family comparable-quarter counts."""
+    best_family = max(counts, key=lambda family: counts[family]) if counts else None
+    best = counts[best_family] if best_family else 0
+    return {
+        "required_quarters": FORECAST_GATE_QUARTERS,
+        "comparable_quarters": best,
+        "best_family": best_family,
+        "gate_open": best >= FORECAST_GATE_QUARTERS,
+        "by_family": dict(counts),
+    }
+
+
 def forecast_target(
     connection: sqlite3.Connection,
     target_period: str,
@@ -275,7 +313,11 @@ def forecast_target(
         )
     }
     if "descriptive_only" in analysis_uses:
-        raise AnalysisError("forecast mode refused: selected observations are descriptive_only")
+        count = comparable_quarter_count(connection, definition_family)
+        raise AnalysisError(
+            "forecast mode refused: selected observations are descriptive_only "
+            f"({count} of {FORECAST_GATE_QUARTERS} comparable quarters)"
+        )
     metric_period_rows = connection.execute(
         "SELECT metric_name, period_end, value_decimal, currency, scale "
         "FROM reported_metric_observation "
@@ -288,8 +330,10 @@ def forecast_target(
     volume_periods = {row[1] for row in metric_period_rows if row[0] == VOLUME}
     if revenue_periods != volume_periods:
         raise AnalysisError("missing revenue or volume for a compatible historical period")
-    if "forecast_eligible" in analysis_uses and len(revenue_periods) < 12:
-        raise AnalysisError("forecast mode requires at least 12 comparable historical quarters")
+    if "forecast_eligible" in analysis_uses and len(revenue_periods) < FORECAST_GATE_QUARTERS:
+        raise AnalysisError(
+            f"forecast mode requires at least {FORECAST_GATE_QUARTERS} comparable historical quarters"
+        )
     variants = {}
     currencies_by_period = {}
     for metric, period, value, currency, scale in metric_period_rows:
