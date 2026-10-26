@@ -8,7 +8,7 @@
 - `scripts/build_latest_bridge.py` writes the Q1 to Q2 2026 bridge to `outputs/final-package/latest-bridge.csv`; the case study site has a new section for it.
 - The validator gains `forecast_gate` and `latest_bridge` checks (17 in total). The suite has 18 tests.
 - Not rebuilt: the workbook (its builder is not in this repo), the PDFs (they need a macOS font) and the demo videos. They still cover Q3 to Q4 2024.
-- `scripts/build_no_forecast_card.py` renders the no-forecast chart card (landscape 1024x576, square 1024x1024) to `outputs/no-forecast-card/` from `analytics-ready-metrics.csv`, with alt text in `alt-text.txt`. It checks type size, the one-line 28px definition footer, and overflow in the rendered page. Fonts (Roboto Slab, Archivo) are in `scripts/card-fonts/` with their licenses.
+- `scripts/build_no_forecast_card.py` renders the no-forecast chart card (landscape 1024x640, square 1024x1024) to `outputs/no-forecast-card/` from `analytics-ready-metrics.csv`, with alt text in `alt-text.txt`. It checks type size, the one-line 28px definition footer, and overflow in the rendered page. The source line is 28px. The alt text now lists all nine bar values. Fonts (Roboto Slab, Archivo) are in `scripts/card-fonts/` with their licenses.
 
 ## v1.1.0 (2026-09-23)
 
