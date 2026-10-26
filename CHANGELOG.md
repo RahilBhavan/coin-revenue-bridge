@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- `scripts/build_no_forecast_card.py` renders the no-forecast chart card (landscape 1024x576, square 1024x1024) to `outputs/no-forecast-card/` from `analytics-ready-metrics.csv`, with alt text in `alt-text.txt`. It checks type size, the one-line 28px definition footer, and overflow in the rendered page. Fonts (Roboto Slab, Archivo) are in `scripts/card-fonts/` with their licenses.
+
 ## v1.1.0 (2026-09-23)
 
 - `validate_final_evidence.py` now exits 1 when any check fails, and skips the checks that need gitignored prep inputs with the command to run first.
