@@ -1,1 +1,1 @@
-Only these 9 quarters share one Coinbase definition, including Q3-Q4 2023 as restated in Q1 2024; Coinbase later redefined trading volume.
+Bar chart of Coinbase consumer transaction revenue, $M, Q3 2023 to Q3 2025: 247.0, 468.9, 935.2, 664.8, 483.3, 1,347.1, 1,095.5, 649.9, 843.5. Q3-Q4 2023 are restated in Q1 2024. Only these 9 quarters share one Coinbase definition; Coinbase later redefined trading volume.

@@ -26,17 +26,19 @@ NAVY = "#0B1F4B"
 RED = "#C8102E"
 WIDTH = 1024
 MIN_PX = 26
+SRC_PX = 28
 
 TITLE = "Nine comparable quarters are too few to forecast"
 DEFINITION = "Only these 9 quarters share one Coinbase definition, incl. restated 2023."
 ALT = (
-    "Only these 9 quarters share one Coinbase definition, including Q3-Q4 2023 as restated "
-    "in Q1 2024; Coinbase later redefined trading volume."
+    "Bar chart of Coinbase consumer transaction revenue, $M, Q3 2023 to Q3 2025: 247.0, 468.9, "
+    "935.2, 664.8, 483.3, 1,347.1, 1,095.5, 649.9, 843.5. Q3-Q4 2023 are restated in Q1 2024. "
+    "Only these 9 quarters share one Coinbase definition; Coinbase later redefined trading volume."
 )
 METRIC = "consumer_transaction_revenue"
 
 # name -> (height px, title px, chart area px)
-CARDS = {"landscape": (576, 40, 232), "square": (1024, 56, 520)}
+CARDS = {"landscape": (640, 40, 296), "square": (1024, 56, 520)}
 
 
 def load_rows():
@@ -116,7 +118,7 @@ h1{{font:700 {title_px}px/1.15 'Roboto Slab',serif;letter-spacing:-.01em}}
 .restated{{margin-top:{MIN_PX + 14}px;border-top:3px solid {RED};text-align:center;color:{RED};font-weight:600;padding-top:2px}}
 .foot{{margin-top:{18 if name == "square" else 8}px}}
 .def{{font-size:28px;font-weight:600;white-space:nowrap}}
-.src{{font-size:{MIN_PX}px;margin-top:2px;white-space:nowrap}}
+.src{{font-size:{SRC_PX}px;margin-top:2px;white-space:nowrap}}
 </style>
 <div class="card" role="img" aria-label="{html.escape(ALT)}">
 <h1>{html.escape(TITLE)}</h1>
@@ -179,7 +181,7 @@ def main():
     if len(bars) != 9:
         sys.exit(f"expected 9 quarters of {METRIC}, found {len(bars)}")
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    (OUT_DIR / "alt-text.txt").write_text(ALT + "\n")
+    (OUT_DIR / "alt-text.txt").write_text(ALT)
     failed = False
     with tempfile.TemporaryDirectory(prefix="nf-card-") as tmp:
         for name, (height, _, _) in CARDS.items():
