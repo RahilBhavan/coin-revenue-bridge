@@ -17,6 +17,7 @@ COPIES = {
     ROOT / "outputs/descriptive-bridge/descriptive-review.png": OUT / "workbook-preview.png",
     ROOT / "data/processed/reported-metric-observations.csv": OUT / "reported-metrics.csv",
     ROOT / "data/processed/analytics-ready-metric-observations.csv": OUT / "analytics-ready-metrics.csv",
+    ROOT / "data/processed/analytics-ready-metric-observations-post-2025q4.csv": OUT / "analytics-ready-metrics-post-2025q4.csv",
     ROOT / "sql/descriptive_bridge.sql": OUT / "analysis.sql",
     ROOT / "sql/final_package_schema.sql": OUT / "schema.sql",
     ROOT / "scripts/reproduce_final_analysis.py": OUT / "reproduce.py",
@@ -33,11 +34,11 @@ COPIES = {
 README = """# Coinbase revenue bridge: analysis package
 
 Status: **DESCRIPTIVE / NOT A FORECAST**  
-Evidence cutoff: **September 20, 2026**
+Evidence cutoff: **September 20, 2026** for the Q3-to-Q4 2024 bridge, memo, reviewer packet and workbook. Filings through **October 25, 2026** (Q1 and Q2 2026) were added for `latest-bridge.csv` and `forecast-gate.csv`.
 
 ## Decision
 
-Use the Q3-to-Q4 2024 consumer transaction revenue bridge and editable planning sensitivities as decision-support diagnostics. Do not present a forecasting or causal-performance claim. The public panel contains nine comparable quarters, below the predeclared twelve-quarter gate.
+Use the Q3-to-Q4 2024 consumer transaction revenue bridge and editable planning sensitivities as decision-support diagnostics. Do not present a forecasting or causal-performance claim. The public panel contains nine comparable quarters, below the predeclared twelve-quarter gate. Adding Q4 2025 to Q2 2026 does not change that: Coinbase redefined trading volume in Q4 2025 and again in Q2 2026, so those quarters sit in a separate five-quarter family. `forecast-gate.csv` reports the count per family.
 
 ## Start here
 
@@ -52,9 +53,12 @@ Use the Q3-to-Q4 2024 consumer transaction revenue bridge and editable planning 
 
 - `reported-metrics.csv` - reviewed long-form source observations.
 - `analytics-ready-metrics.csv` - normalized descriptive series.
+- `analytics-ready-metrics-post-2025q4.csv` - the five-quarter post-Q4-2025 family behind `latest-bridge.csv`.
 - `descriptive-bridge.csv` - workbook bridge input.
 - `bridge-attribution.csv` - volume-first, yield-first, and symmetric allocations.
 - `planning-scenarios.csv` - editable illustrative sensitivity inputs and outputs.
+- `latest-bridge.csv` - newest quarter-over-quarter bridge (Q1 to Q2 2026) in the post-change volume family; not covered by the memo, packet or workbook.
+- `forecast-gate.csv` - comparable-quarter count per definition family against the twelve-quarter gate.
 - `definition-reconciliation.csv` - Q2-Q4 2025 earlier-versus-later volume vintages.
 - `analysis.sql` - fixed-order SQL decomposition.
 - `schema.sql` and `reproduce.py` - package-local executable reproduction path.
@@ -116,6 +120,7 @@ def main() -> int:
         "schema_version": "1.0",
         "status": "DESCRIPTIVE / NOT A FORECAST",
         "evidence_cutoff": "2026-09-20",
+        "extension_evidence_cutoff": "2026-10-25",
         "file_count": len(files),
         "files": files,
     }

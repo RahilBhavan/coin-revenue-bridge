@@ -2,12 +2,13 @@
   "schema_version": "1.0",
   "status": "DESCRIPTIVE / NOT A FORECAST",
   "evidence_cutoff": "2026-09-20",
-  "file_count": 40,
+  "extension_evidence_cutoff": "2026-10-25",
+  "file_count": 47,
   "files": [
     {
       "path": "README.md",
-      "bytes": 2780,
-      "sha256": "127f5457bdb75f53e349c109116f1475d9b52aa5010086c64793a698b3bebff2"
+      "bytes": 3551,
+      "sha256": "2d5d68539cee4b1bad478c98c2e9b0ad51010bca4bc6d2b8051ea282f2002373"
     },
     {
       "path": "ai-contribution.md",
@@ -18,6 +19,11 @@
       "path": "analysis.sql",
       "bytes": 1808,
       "sha256": "0de6f5709ce312c00fb89c807e2ab67af5e5ea56254ef2e40d80310b7e267611"
+    },
+    {
+      "path": "analytics-ready-metrics-post-2025q4.csv",
+      "bytes": 2397,
+      "sha256": "9c7e02e36a207175c5233a710f09baa16daabd1e8d4942aacf5fca2ec6c70b7d"
     },
     {
       "path": "analytics-ready-metrics.csv",
@@ -70,6 +76,16 @@
       "sha256": "02379c0d786f0aa275f531f7b2889f3f7c863591c352362cc0256e481b7a6d5f"
     },
     {
+      "path": "forecast-gate.csv",
+      "bytes": 258,
+      "sha256": "687bf3c0c384a5dace0dcf96896ba2617e9981e95d0cc4e3f8a51624445e407c"
+    },
+    {
+      "path": "latest-bridge.csv",
+      "bytes": 610,
+      "sha256": "8de7a30fa8be389bd6deec391bc7570d224632e35214ecfd6c2dd978d6bdb890"
+    },
+    {
       "path": "overlap-reconciliation.csv",
       "bytes": 3152,
       "sha256": "566cbebb54722b1b19ab75bd1a6940fa62b8bbbeec158823db696fa8e1132b20"
@@ -90,6 +106,16 @@
       "sha256": "54b98a8bacc795a1fc0bb65613793ce18a172c276b5cb399f3c6cbc24208d688"
     },
     {
+      "path": "raw-sources/coin-20260331-10q.html",
+      "bytes": 1560215,
+      "sha256": "dea2d2096fdece21016fac4f474e0017481e3da198d8d50d68027628fa61a6a7"
+    },
+    {
+      "path": "raw-sources/coin-20260630-10q.html",
+      "bytes": 1876426,
+      "sha256": "bec512d5e5dbc73c8e13d82e6f772c1e3bd4479e3621ca4f352afb84c28bcbad"
+    },
+    {
       "path": "raw-sources/q1-2024-shareholder-letter.html",
       "bytes": 73487,
       "sha256": "072570b217459612c2b179559c77fd8ca93dde3c51d14236978edb9ffdc1b7a6"
@@ -98,6 +124,11 @@
       "path": "raw-sources/q1-2025-shareholder-letter.html",
       "bytes": 1338420,
       "sha256": "f85512aabb5d31be302675a5093344d1c2089600ed6ba49ecd45b850ab86db30"
+    },
+    {
+      "path": "raw-sources/q1-2026-earnings-deck.html",
+      "bytes": 53421,
+      "sha256": "5a62a6ecc2ccbdcb4b63af75060b63c68a929a4595066d8e32f744f14abf43ee"
     },
     {
       "path": "raw-sources/q2-2024-shareholder-letter.html",
@@ -145,14 +176,19 @@
       "sha256": "54401431cd806489a45cdcdce3940d659906db19a63ea18ccd99de7c07f07f0a"
     },
     {
+      "path": "raw-sources/sec-submissions-cik0001679788-20261025.json",
+      "bytes": 159216,
+      "sha256": "de4b03da095ad880baf0f4738ca80f8ab5639972d3fbb6d430f92462de3d63ad"
+    },
+    {
       "path": "raw-sources/sec-submissions-cik0001679788.json",
       "bytes": 159340,
       "sha256": "7c185c66912c187879de4163569920b4d34b04771a517860cca1b992eb67615c"
     },
     {
       "path": "reported-metrics.csv",
-      "bytes": 5450,
-      "sha256": "87e869203121d6610d57c57c26ba967e931fbeb4e6ee19009ad770a2a999b1a9"
+      "bytes": 9245,
+      "sha256": "10afe8498ef071cc941078f9f5f3cfecfdba377851730728baefe52fe0ddc40c"
     },
     {
       "path": "reproduce.py",
@@ -186,18 +222,18 @@
     },
     {
       "path": "source-register.csv",
-      "bytes": 6477,
-      "sha256": "8fac4246624c146026d7ce4b88e80af2b9d76610675f2c319a406b2ced0671ea"
+      "bytes": 8882,
+      "sha256": "b30c93b37f21399da1dd22c3bcee7fe9cdda31a0b23b5b0bef8aabdf5e94dd18"
     },
     {
       "path": "validation-evidence.json",
-      "bytes": 4352,
-      "sha256": "cefdff10dbaf70359e69f608e8953e7ad171442354d3722357dfa0c55bc59b37"
+      "bytes": 4969,
+      "sha256": "06d5075742c7d85e07d71e64c940336e71f5cb7f9d22883f1e68321832798ec3"
     },
     {
       "path": "validation-report.md",
-      "bytes": 7890,
-      "sha256": "59a5db2040e3ff29ce00bb81a6c5977f10d814b0afca491e9e261d1301e0fce5"
+      "bytes": 9026,
+      "sha256": "cff451c06d536e59b60b5dbaf34ac721bb1e24764a98fea894966dc2b5785587"
     },
     {
       "path": "workbook-preview.png",

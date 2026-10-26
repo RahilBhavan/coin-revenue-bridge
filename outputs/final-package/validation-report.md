@@ -11,7 +11,7 @@ The evidence gate changed the deliverable. Only nine comparable paired quarters 
 
 | ID | Status | Evidence |
 |---|---|---|
-| V-01 | PASS | `python3 scripts/validate_final_evidence.py` recomputed SHA-256 for all 13 registered local sources and resolved all 20 reviewed observation rows to a registered `source_id`; zero mismatches or unresolved IDs. The source register now includes the 2025 10-K, Q4 2025 shareholder letter, and Q2 2026 earnings deck used for the later-definition crosswalk. |
+| V-01 | PASS | `python3 scripts/validate_final_evidence.py` recomputed SHA-256 for all 17 registered local sources and resolved all 30 reviewed observation rows to a registered `source_id`; zero mismatches or unresolved IDs. The source register now includes the 2025 10-K, Q4 2025 shareholder letter, and Q2 2026 earnings deck used for the later-definition crosswalk. |
 | V-02 | PASS | `scripts/reconcile_overlap_tables.py` parsed the table-based SEC exhibits and reconciled 16 repeated metric-period-definition groups across successive five-quarter tables; every difference was zero. The three older image-layout exhibits are excluded from table parsing, while their original/recast distinction remains preserved in the reviewed dataset and workbook appendix. Evidence: `overlap-reconciliation.csv`. |
 | V-03 | PASS | `python3 -m unittest discover -s tests -v`; `test_cutoff_and_lag_only_forecast` and `test_definition_family_and_post_cutoff_rows_fail_closed` passed, including exclusion of post-cutoff data in the synthetic forecast fixture. |
 | V-04 | PASS | Same suite; incompatible definition families fail closed. The real descriptive panel uses one explicit paired family, while original/recast revenue definitions remain separate upstream. |
@@ -72,3 +72,10 @@ Machine-readable results and final-package SHA-256 values are in `validation-evi
 4. The Q2-Q4 2025 volume vintages are crosswalked, but they remain incompatible with the earlier panel and should not be silently spliced into it.
 5. The practitioner-review protocol is complete, but real external human review has not yet been obtained.
 6. The public case-study site is deploy-ready but has not been published, and browser visual preview was blocked by local URL policy; static structure and links were validated locally.
+
+## Extension of 2026-10-25: Q4 2025 to Q2 2026
+
+- Added the Q1 2026 earnings deck and the Q1 and Q2 2026 Forms 10-Q to the frozen sources, plus a refreshed SEC submissions index. `validate_final_evidence.py` recomputed all 17 hashes and passed 17 checks.
+- `python3 scripts/forecast_gate.py` counts the longest consecutive run of quarters with both metrics under one definition family: 9 for `PAIR-REV-POST2024Q1-VOL-SPOT-PRE2025Q4` (Q3 2023 to Q3 2025) and 5 for `PAIR-REV-POST2024Q1-VOL-CRYPTO-SPOT-EX-STABLE-Q2-2026` (Q2 2025 to Q2 2026). The gate needs 12, so it stays closed and no forecast was built. Twelve calendar quarters have data, but they span two incompatible volume definitions.
+- `outputs/final-package/latest-bridge.csv` bridges Q1 to Q2 2026 within the five-quarter family. All three allocations reconcile to the -$115.2M change with a $0.0M residual. The memo, reviewer packet and workbook were not rebuilt and still cover Q3 to Q4 2024.
+- Coinbase's Q2 2026 Form 10-Q states that Trading Volume is no longer a key metric from Q2 2026, so the post-change family cannot be extended by later filings of the same kind.

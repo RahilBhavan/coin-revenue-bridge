@@ -65,6 +65,15 @@ def money(value: str) -> str:
     return f"${float(value):,.1f}M"
 
 
+MINUS = "\u2212"
+
+
+def signed(value: str) -> str:
+    number = float(value)
+    sign = "+" if number > 0 else MINUS if number < 0 else ""
+    return f"{sign}${abs(number):,.1f}M"
+
+
 def render_html() -> str:
     with (FINAL / "bridge-attribution.csv").open(newline="", encoding="utf-8") as handle:
         rows = {row["method"]: row for row in csv.DictReader(handle)}
@@ -78,6 +87,29 @@ def render_html() -> str:
         "@@VOL_SHAPLEY@@": money(shapley["volume_effect_mm"]),
         "@@YIELD_SHAPLEY@@": money(shapley["yield_effect_mm"]),
     }
+    with (FINAL / "latest-bridge.csv").open(newline="", encoding="utf-8") as handle:
+        latest = {row["method"]: row for row in csv.DictReader(handle)}
+    with (FINAL / "forecast-gate.csv").open(newline="", encoding="utf-8") as handle:
+        gate = list(csv.DictReader(handle))
+    with (ROOT / "artifacts" / "source-register.csv").open(newline="", encoding="utf-8") as handle:
+        sources = len(list(csv.DictReader(handle)))
+    lf, ly, ls = latest["Volume first"], latest["Yield first"], latest["Symmetric Shapley"]
+    values.update({
+        "@@LATEST_FROM_REV@@": money(lf["from_revenue_mm"]),
+        "@@LATEST_TO_REV@@": money(lf["to_revenue_mm"]),
+        "@@LATEST_FROM_VOL@@": f"${float(lf['from_volume_bn']):.1f}B",
+        "@@LATEST_TO_VOL@@": f"${float(lf['to_volume_bn']):.1f}B",
+        "@@LATEST_TOTAL_SIGNED@@": signed(lf["revenue_change_mm"]),
+        "@@LATEST_VOL_FIRST_SIGNED@@": signed(lf["volume_effect_mm"]),
+        "@@LATEST_YIELD_FIRST_SIGNED@@": signed(lf["yield_effect_mm"]),
+        "@@LATEST_VOL_YF_SIGNED@@": signed(ly["volume_effect_mm"]),
+        "@@LATEST_YIELD_YF_SIGNED@@": signed(ly["yield_effect_mm"]),
+        "@@LATEST_VOL_SH_SIGNED@@": signed(ls["volume_effect_mm"]),
+        "@@LATEST_YIELD_SH_SIGNED@@": signed(ls["yield_effect_mm"]),
+        "@@SOURCES@@": str(sources),
+        "@@GATE_COUNT@@": str(max(int(row["comparable_quarters"]) for row in gate)),
+        "@@GATE_NEW@@": str(min(int(row["comparable_quarters"]) for row in gate)),
+    })
     html = (ROOT / "scripts" / "public_case_study.html").read_text(encoding="utf-8")
     for token, value in values.items():
         html = html.replace(token, value)

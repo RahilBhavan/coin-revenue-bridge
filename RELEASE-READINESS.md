@@ -4,10 +4,10 @@ Last validated: **2026-09-23**
 
 ## Ready
 
-- 13 unit tests pass.
+- 18 unit tests pass (13 at the 2026-09-23 validation; 5 added 2026-10-25 for the forecast gate and the latest bridge).
 - The descriptive workbook rebuilds with seven expected sheets and passes its
   formula, unit, provenance, label, sensitivity, and reconciliation checks.
-- All 15 final-evidence checks pass, including 13 frozen-source hashes, 20
+- All 17 final-evidence checks pass (2026-10-25), including 17 frozen-source hashes, 30
   source-resolved observations, duplicate rejection, bridge arithmetic,
   definition reconciliation, public-page structure and headline numbers,
   deliverable presence, and human-review disclosure.

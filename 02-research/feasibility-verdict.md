@@ -46,3 +46,7 @@ Proceed with one clearly labeled descriptive bridge using the post-reclassificat
 - `artifacts/source-register.csv`: source-level provenance and hashes.
 
 No model was fit, no forecast was scored, and no claim of predictive superiority was tested.
+
+## Update 2026-10-25
+
+Filings through the Q2 2026 Form 10-Q were frozen. The candidate window did not grow. Q4 2025 onward use the routed-volume definition and the Q2 2026 deck makes a further stablecoin adjustment, so those quarters form a separate five-quarter family (Q2 2025 to Q2 2026). The Q2 2026 10-Q also states that Trading Volume is no longer a key metric. The comparable count is 9 of the 12 required (`python3 scripts/forecast_gate.py`). The verdict stays PIVOT.
