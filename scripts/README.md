@@ -68,3 +68,17 @@ checks that all text is at least 26px, that nothing overflows and that the three
 ```sh
 python3 scripts/build_no_forecast_chart.py
 ```
+
+## Revenue bridge card
+
+`build_revenue_bridge_card.py` renders `outputs/revenue-bridge-card/revenue-bridge-card-square.png` (1080x1080) in the Rahil Design system (rahil-design 3.10.0: charcoal `#111214`, off-white `#F5F5EF`, yellow `#FFE500`, Anton and IBM Plex Sans, fonts and a token excerpt in `card-fonts/rahil/`). It reads the Q3 to Q4 2024 bridge from `outputs/final-package/descriptive-bridge.csv` and `bridge-attribution.csv`, labels every bar in $M, adds a one-line Shapley definition and a source and date footer, and refuses to render if the printed numbers do not add up. The page is authored at 390x390 with 22px labels and a 48px title so labels stay at least 18px in a 326px feed box. It also writes `card.html`, `alt-text.txt`, `feed-360.png` and `feed-390.png` (the card inside a 360px and a 390px phone frame), `brief.json`, `manifest.json` (SHA-256 per file, status "design review pending") and `palette-check.txt` (the rahil-design system, lint, feed and pixel-audit output for this card). It needs Firefox through Playwright and rahil-design's `social_bars.py` for the in-page checks (`RAHIL_DESIGN_SCRIPTS`).
+
+```sh
+uv run --with playwright==1.63.0 --with fonttools --with pillow --with numpy python3 scripts/build_revenue_bridge_card.py
+```
+
+`check_coinbase_filing.py` reports whether Coinbase's 10-Q and earnings 8-K for a quarter are on SEC EDGAR (`OUT` with URLs and acceptance times, or `HELD`). It needs `SEC_USER_AGENT` set to a contact string.
+
+```sh
+SEC_USER_AGENT="Your Name you@example.com" python3 scripts/check_coinbase_filing.py 2026-09-30
+```

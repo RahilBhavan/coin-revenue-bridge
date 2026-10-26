@@ -1,0 +1,14 @@
+{
+  "design_system": "rahil-design 3.10.0 (tokens.json sha256 e3e929a54479270d35db0079d4527ec816d19c6119557186d089442f8e91da5a)",
+  "review_status": "design review pending",
+  "authored_px": 390,
+  "output_px": 1080,
+  "artifacts": {
+    "revenue-bridge-card-square.png": "28f27466f00cbdef8730f66981f5686d1990b9d398dfbea39458a0dd42c57992",
+    "card.html": "0a0bf7c1d04ceeba27c7630215b57506a0e2895ab4100f6d24427ec3656a2dd0",
+    "feed-360.png": "559606d887ec71315057d2d4092ebcf80d67d3c4019694e0f821a51921c0c9af",
+    "feed-390.png": "4bd0eba009376e392928a42d4a7fd04a69a525ff7ef7f4725d02c68b99d855f4",
+    "alt-text.txt": "51955e75a40611e1d79b161ebc9b317856d4937d7c1e11e9aa7c6c4484b57ee0",
+    "brief.json": "fb097ed9775ce680c5abc6ed073bef2f5105e6c9628e247590d4465727a20371"
+  }
+}

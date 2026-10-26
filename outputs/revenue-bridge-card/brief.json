@@ -1,0 +1,29 @@
+{
+  "id": "revenue-bridge-card",
+  "title": "Volume: $856.4M of $863.8M",
+  "system_version": "3.10.0",
+  "accents": 1,
+  "accent_meaning": "title-value",
+  "encodings": [
+    {
+      "mark": "bar",
+      "baseline": 0,
+      "scale_max": 1347.1
+    }
+  ],
+  "sizes_checked": [
+    "390x390"
+  ],
+  "feed_frames": {
+    "feed-360": "326px card in a 360px phone frame",
+    "feed-390": "356px card in a 390px phone frame"
+  },
+  "measurement_basis": "canvas",
+  "measured_by": "build_revenue_bridge_card/social_bars MEASURE (firefox)",
+  "min_label_px": 22,
+  "point_px": 48,
+  "title_lines": 2,
+  "overflow": [],
+  "source": "Source: Coinbase SEC filings. Data as of Feb 13, 2025.",
+  "alt": "Bar chart of Coinbase consumer transaction revenue in $M, Q3 to Q4 2024. Title: Volume: $856.4M of $863.8M. Q3 2024 revenue was $483.3M. The volume effect added $856.4M, highlighted in yellow, and the yield effect added $7.4M, a hairline-thin bar, so the two effects make up the $863.8M increase to $1,347.1M in Q4 2024. Shapley: average of both orders. Source: Coinbase SEC filings. Data as of Feb 13, 2025."
+}
