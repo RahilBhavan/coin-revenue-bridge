@@ -74,7 +74,7 @@ python3 scripts/build_enhanced_analysis.py
 python3 scripts/validate_final_evidence.py
 ```
 
-The test suite runs 18 tests. `reproduce.py` prints `PASS: bridge reconciles within $0.1M`. After the two prep steps, `validate_final_evidence.py` reports 17 checks as `PASS`. It exits 1 if any check fails. Without the prep steps it skips the checks that need their outputs and prints the command to run.
+The test suite runs 26 tests. `reproduce.py` prints `PASS: bridge reconciles within $0.1M`. After the two prep steps, `validate_final_evidence.py` reports 17 checks as `PASS`. It exits 1 if any check fails. Without the prep steps it skips the checks that need their outputs and prints the command to run.
 
 The workbook is built with a separate spreadsheet tool that is not part of this repo. The committed workbook is the source of truth.
 
@@ -85,6 +85,7 @@ The workbook is built with a separate spreadsheet tool that is not part of this 
 - `data/`: raw SEC documents and processed metric observations
 - `dist/`: the static site that Vercel serves
 - `docs/`: README screenshot, social card, and the "no forecast" post images with alt text
+- `outputs/revenue-bridge-card/`: the revenue bridge post card (1080x1080), phone-feed frames, alt text and palette check
 - `outputs/`: final reviewer package, executive package, descriptive bridge, and public case study
 - `reporting/`: reporting pipeline, fixtures, and sample outputs
 - `scripts/`: builders, reproduction scripts, and the evidence validator

@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- `scripts/build_revenue_bridge_card.py` renders the Q3 to Q4 2024 revenue bridge card (1080x1080) to `outputs/revenue-bridge-card/` in the Rahil Design 3.10.0 palette and fonts: $M on every bar, a one-line Shapley definition, a source and date footer, 360px and 390px feed frames, alt text, a manifest with SHA-256 hashes and a palette check. Design review is pending. It supersedes the navy draft in PR #11.
+- `scripts/check_coinbase_filing.py` reports whether the Q3 2026 10-Q and earnings 8-K are on EDGAR. On 2026-10-26 they were not (`outputs/coinbase-q3-2026-source-check.md`).
 - Froze the Q1 2026 earnings deck and the Q1 and Q2 2026 Forms 10-Q, with a refreshed SEC submissions index. The source register now holds 17 documents and the observation ledger 30 rows.
 - Added the post-Q4-2025 volume family (Q2 2025 to Q2 2026, five quarters) as a separate analytics-ready file. Coinbase redefined trading volume in Q4 2025 and again in Q2 2026, and stopped reporting it as a key metric from Q2 2026, so these quarters are not added to the earlier nine.
 - `comparable_quarter_count` and `scripts/forecast_gate.py` report the real comparable-quarter count per definition family (9 of 12, gate closed). The refusal message in forecast mode now includes the count.
