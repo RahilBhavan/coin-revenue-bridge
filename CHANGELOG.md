@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased (2026-10-25)
+## Unreleased
 
 - Froze the Q1 2026 earnings deck and the Q1 and Q2 2026 Forms 10-Q, with a refreshed SEC submissions index. The source register now holds 17 documents and the observation ledger 30 rows.
 - Added the post-Q4-2025 volume family (Q2 2025 to Q2 2026, five quarters) as a separate analytics-ready file. Coinbase redefined trading volume in Q4 2025 and again in Q2 2026, and stopped reporting it as a key metric from Q2 2026, so these quarters are not added to the earlier nine.
@@ -8,6 +8,7 @@
 - `scripts/build_latest_bridge.py` writes the Q1 to Q2 2026 bridge to `outputs/final-package/latest-bridge.csv`; the case study site has a new section for it.
 - The validator gains `forecast_gate` and `latest_bridge` checks (17 in total). The suite has 18 tests.
 - Not rebuilt: the workbook (its builder is not in this repo), the PDFs (they need a macOS font) and the demo videos. They still cover Q3 to Q4 2024.
+- `scripts/build_no_forecast_card.py` renders the no-forecast chart card (landscape 1024x576, square 1024x1024) to `outputs/no-forecast-card/` from `analytics-ready-metrics.csv`, with alt text in `alt-text.txt`. It checks type size, the one-line 28px definition footer, and overflow in the rendered page. Fonts (Roboto Slab, Archivo) are in `scripts/card-fonts/` with their licenses.
 
 ## v1.1.0 (2026-09-23)
 
