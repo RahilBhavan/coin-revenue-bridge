@@ -72,7 +72,7 @@ The workbook is built with a separate spreadsheet tool that is not part of this 
 - `artifacts/`: source register and artifact manifest
 - `data/`: raw SEC documents and processed metric observations
 - `dist/`: the static site that Vercel serves
-- `docs/`: README screenshot and social card
+- `docs/`: README screenshot, social card, and the "no forecast" post images with alt text
 - `outputs/`: final reviewer package, executive package, descriptive bridge, and public case study
 - `reporting/`: reporting pipeline, fixtures, and sample outputs
 - `scripts/`: builders, reproduction scripts, and the evidence validator

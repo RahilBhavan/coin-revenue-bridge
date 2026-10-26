@@ -54,3 +54,17 @@ Use `--format csv` for a one-row reporting feed. Both formats label the analysis
 as descriptive and include explicit revenue, volume, and effective-yield units.
 Forecast-eligible real data also requires at least 12 comparable historical
 quarters; synthetic test rows are isolated from that release-readiness gate.
+
+## "No forecast" post images
+
+`build_no_forecast_chart.py` renders `docs/no-forecast-chart-landscape.png` (1024x576 at 2x) and
+`docs/no-forecast-chart-square.png` (1024x1024 at 2x), plus `docs/no-forecast-chart-alt.txt`.
+It reads the 12-quarter gate from `README.md` and `outputs/final-package/validation-report.md`
+and the nine quarters from `outputs/final-package/analytics-ready-metrics.csv`, and stops if
+they disagree. The footer date and sha are those of the last commit that changed the data files.
+It needs Chromium; fonts are bundled in `scripts/assets/fonts/`. Before each screenshot it
+checks that all text is at least 26px, that nothing overflows and that the three fonts loaded.
+
+```sh
+python3 scripts/build_no_forecast_chart.py
+```
