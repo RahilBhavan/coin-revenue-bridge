@@ -9,6 +9,8 @@
 - The validator gains `forecast_gate` and `latest_bridge` checks (17 in total). The suite has 18 tests.
 - Not rebuilt: the workbook (its builder is not in this repo), the PDFs (they need a macOS font) and the demo videos. They still cover Q3 to Q4 2024.
 - `scripts/build_no_forecast_card.py` renders the no-forecast chart card (landscape 1024x576, square 1024x1024) to `outputs/no-forecast-card/` from `analytics-ready-metrics.csv`, with alt text in `alt-text.txt`. It checks type size, the one-line 28px definition footer, and overflow in the rendered page. Fonts (Roboto Slab, Archivo) are in `scripts/card-fonts/` with their licenses.
+- `scripts/build_revenue_bridge_card.py` renders the Q3 to Q4 2024 revenue bridge card (landscape 1024x640, square 1024x1024) to `outputs/revenue-bridge-card/`. Every bar label carries `$M`, a one-line Shapley split definition sits above the chart, and the footer gives source and data date. Numbers are unchanged (483.3 + 856.4 + 7.4 = 1,347.1) and come from `descriptive-bridge.csv` and `bridge-attribution.csv`. `manifest.json` records each PNG's SHA-256. Review draft: design review pending.
+- `DESIGN.md` records the card design system and flags its conflict with `rahil-design` 3.3.1.
 
 ## v1.1.0 (2026-09-23)
 

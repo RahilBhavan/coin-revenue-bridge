@@ -1,0 +1,1 @@
+Waterfall chart of Coinbase consumer transaction revenue in $M: $483.3M in Q3 2024, plus a $856.4M volume effect (highlighted in red), plus a $7.4M yield effect, equals $1,347.1M in Q4 2024. Shapley split: each driver’s average effect across both orders.

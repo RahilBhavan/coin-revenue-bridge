@@ -1,0 +1,26 @@
+{
+  "script": "scripts/build_revenue_bridge_card.py",
+  "design_review": "pending: navy/red, Roboto Slab and Archivo follow the request, not rahil-design 3.3.1; see DESIGN.md",
+  "numbers_usd_mm": {
+    "start": "483.3",
+    "volume": "856.4",
+    "yield": "7.4",
+    "end": "1347.1"
+  },
+  "title": "Volume drove $856.4M of Coinbase’s $863.8M revenue jump",
+  "shapley_line": "Shapley split: each driver’s average effect across both orders.",
+  "footer": "Source: Coinbase SEC filings, Q3 and Q4 2024. Data as of Feb 13, 2025.",
+  "alt_text": "Waterfall chart of Coinbase consumer transaction revenue in $M: $483.3M in Q3 2024, plus a $856.4M volume effect (highlighted in red), plus a $7.4M yield effect, equals $1,347.1M in Q4 2024. Shapley split: each driver’s average effect across both orders.",
+  "files": {
+    "revenue-bridge-card-landscape.png": {
+      "width": 1024,
+      "height": 640,
+      "sha256": "e73dcd4df9ac233ab0d4c787603810d310a7e45ee787a3bb7a18afb992278046"
+    },
+    "revenue-bridge-card-square.png": {
+      "width": 1024,
+      "height": 1024,
+      "sha256": "46af9b7ee6f7f2cc862153630f6f9a698a9542169bf5e4960ca7d916558fb870"
+    }
+  }
+}

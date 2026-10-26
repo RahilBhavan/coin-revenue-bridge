@@ -68,3 +68,15 @@ checks that all text is at least 26px, that nothing overflows and that the three
 ```sh
 python3 scripts/build_no_forecast_chart.py
 ```
+
+## Revenue bridge card
+
+`build_revenue_bridge_card.py` renders `outputs/revenue-bridge-card/revenue-bridge-card-landscape.png`
+(1024x640), `revenue-bridge-card-square.png` (1024x1024), `alt-text.txt` and `manifest.json` with each
+PNG's SHA-256. It reads the Q3 to Q4 2024 bridge from `outputs/final-package/descriptive-bridge.csv`
+and `bridge-attribution.csv`, and refuses to render if the printed numbers do not add up. It needs
+Chromium and fonts from `scripts/card-fonts/`. Design rules are in the root `DESIGN.md`.
+
+```sh
+python3 scripts/build_revenue_bridge_card.py
+```
