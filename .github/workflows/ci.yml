@@ -20,3 +20,25 @@ jobs:
         run: python -m unittest discover -s tests
       - name: Reproduce the published bridge
         run: python outputs/final-package/reproduce.py
+
+  helper-scripts:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.11"
+      - name: Install requirements-dev.txt in a fresh venv
+        run: |
+          python -m venv "$RUNNER_TEMP/venv"
+          "$RUNNER_TEMP/venv/bin/pip" install -r requirements-dev.txt
+      - name: Run the helper scripts
+        run: |
+          py="$RUNNER_TEMP/venv/bin/python"
+          "$py" scripts/build_pdfs.py
+          "$py" scripts/reconcile_overlap_tables.py
+          python scripts/prepare_descriptive_reporting.py --input data/processed/analytics-ready-metric-observations.csv --output-dir work/real-reporting-inputs --from-period 2024-09-30 --to-period 2024-12-31
+          "$py" scripts/render_demo_frames.py
+          "$py" scripts/stream_demo_frames.py > /dev/null
+          "$py" scripts/stream_social_frames.py > /dev/null
