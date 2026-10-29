@@ -62,7 +62,7 @@ The deliverables:
 
 ## Run it
 
-Python 3.9 or later, standard library only. CI runs Python 3.11. The tests and `reproduce.py` also passed locally on 3.9 and 3.14 (2026-10-24).
+Python 3.9 or later, standard library only, for the tests, `reproduce.py` and the analysis core. The helper scripts need the packages in `requirements-dev.txt` (see below). CI runs Python 3.11. The tests and `reproduce.py` also passed locally on 3.9 and 3.14 (2026-10-24).
 
 ```sh
 python3 -m unittest discover -s tests
@@ -77,6 +77,21 @@ python3 scripts/validate_final_evidence.py
 The test suite runs 18 tests. `reproduce.py` prints `PASS: bridge reconciles within $0.1M`. After the two prep steps, `validate_final_evidence.py` reports 17 checks as `PASS`. It exits 1 if any check fails. Without the prep steps it skips the checks that need their outputs and prints the command to run.
 
 The workbook is built with a separate spreadsheet tool that is not part of this repo. The committed workbook is the source of truth.
+
+### Helper scripts
+
+Five scripts import third-party packages: `build_pdfs.py` (reportlab), `reconcile_overlap_tables.py` (pandas and lxml) and `render_demo_frames.py`, `stream_demo_frames.py` and `stream_social_frames.py` (Pillow). [`requirements-dev.txt`](requirements-dev.txt) pins them and their dependencies. They need Python 3.11 or later, because pandas 3 does. The pins were installed and the scripts run in fresh venvs on 3.11 and 3.14 (2026-10-29).
+
+```sh
+python3 -m venv .venv
+.venv/bin/pip install -r requirements-dev.txt
+.venv/bin/python scripts/build_pdfs.py
+.venv/bin/python scripts/reconcile_overlap_tables.py
+.venv/bin/python scripts/render_demo_frames.py   # needs the prepare_descriptive_reporting.py step above
+.venv/bin/python scripts/stream_demo_frames.py > /dev/null   # needs render_demo_frames.py first
+```
+
+`build_pdfs.py` overwrites the memo and reviewer packet in `outputs/final-package/`. It uses Arial from macOS and falls back to Helvetica elsewhere, so a rebuild on Linux changes the PDF bytes. The committed PDFs are the source of truth. `render_demo_frames.py` likewise uses Arial on macOS and the bundled Archivo fonts elsewhere. `build_no_forecast_chart.py` and `build_no_forecast_card.py` need a Chromium binary but no Python packages.
 
 ## Repository layout
 

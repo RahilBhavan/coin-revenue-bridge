@@ -1,0 +1,23 @@
+# Packages for the helper scripts in scripts/. The analysis core, the tests and
+# outputs/final-package/reproduce.py use only the standard library and do not need these.
+#
+#   python3 -m venv .venv && .venv/bin/pip install -r requirements-dev.txt
+#
+# Resolved and run on Python 3.11 (2026-10-29). pandas 3 needs Python 3.11 or later.
+
+# scripts/reconcile_overlap_tables.py (pd.read_html uses lxml)
+pandas==3.1.0
+lxml==6.1.3
+
+# scripts/build_pdfs.py
+reportlab==5.1.0
+
+# scripts/render_demo_frames.py, stream_demo_frames.py, stream_social_frames.py
+Pillow==13.0.0
+
+# Dependencies of the packages above, pinned so a fresh venv resolves the same set.
+numpy==2.4.6
+python-dateutil==3.0.0
+six==1.17.0
+tzdata==2026.6
+charset-normalizer==3.5.2

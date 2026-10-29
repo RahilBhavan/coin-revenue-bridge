@@ -26,3 +26,6 @@ work/tmp/
 *.pem
 *.key
 .vercel/
+
+# Local virtualenv for requirements-dev.txt
+.venv/

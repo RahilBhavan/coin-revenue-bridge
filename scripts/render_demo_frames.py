@@ -12,8 +12,12 @@ from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parents[1]
 FRAME_DIR = ROOT / "work" / "demo-frames"
+# Arial where macOS provides it; otherwise the Archivo fonts bundled in scripts/assets/fonts.
 FONT = Path("/System/Library/Fonts/Supplemental/Arial.ttf")
 FONT_BOLD = Path("/System/Library/Fonts/Supplemental/Arial Bold.ttf")
+if not (FONT.exists() and FONT_BOLD.exists()):
+    FONT = ROOT / "scripts" / "assets" / "fonts" / "Archivo-Regular.ttf"
+    FONT_BOLD = ROOT / "scripts" / "assets" / "fonts" / "Archivo-SemiBold.ttf"
 
 
 def font(size: int, bold: bool = False):
